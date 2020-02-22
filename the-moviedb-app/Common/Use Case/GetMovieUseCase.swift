@@ -20,7 +20,7 @@ struct GetMovieUseCase {
         GenericRequest.get(url: url) { (response: MovieResponseType) in
             
             response.onSuccess { (movieResponse) in
-                let convertedEntities = MovieConverter.fromResponseToEntity(movieResponse)
+                let convertedEntities = MovieConverter.fromResponseToEntities(movieResponse)
                 
                 responseCallback(BaseCallback.success(convertedEntities))
             }

@@ -12,8 +12,11 @@ extension UpcomingMoviesViewController {
     
     func setLayout() {
         self.navigationItem.titleView          = self.navigationTitleLabel
-        self.navigationItem.setRightBarButtonItems([self.moreOptionsBarButtonItem, self.searchBarButtonItem], animated: false)
         self.collectionView.backgroundColor    = .secondarySystemBackground
+        
+        self.navigationItem.setRightBarButtonItems([self.moreOptionsBarButtonItem, self.searchBarButtonItem],
+                                                   animated: false)
+        
         collectionView.register(PosterWithDescriptionCollectionViewCell.self,
                                 forCellWithReuseIdentifier: String(describing: PosterWithDescriptionCollectionViewCell.self))
         

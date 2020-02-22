@@ -10,6 +10,16 @@ import UIKit
 
 class UpcomingMoviesViewController: UICollectionViewController {
     
+    var movies: [MovieDTO] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    lazy var presenter: UpcomingMoviesPresenterContract = UpcomingMoviesPresenter(view: self)
+    
     lazy var navigationTitleLabel: UILabel! = {
         let label = UILabel(frame: CGRect(x: 0,
                                           y: 0,
@@ -52,9 +62,16 @@ class UpcomingMoviesViewController: UICollectionViewController {
         return buttonItem
     }()
     
+    deinit {
+        self.navigationTitleLabel     = nil
+        self.searchBarButtonItem      = nil
+        self.searchBar                = nil
+        self.moreOptionsBarButtonItem = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.setLayout()
     }
     
@@ -66,6 +83,7 @@ class UpcomingMoviesViewController: UICollectionViewController {
     
     @objc func moreOptionsDidPress(sender: UIBarButtonItem) {
         // MARK: TODO
+        self.presenter.fetchMovies()
     }
 
 }

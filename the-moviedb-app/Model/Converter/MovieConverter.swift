@@ -10,7 +10,7 @@ import Foundation
 
 struct MovieConverter {
     
-    static func fromResponseToEntity(_ response: MovieResponse) -> [MovieEntity] {
+    static func fromResponseToEntities(_ response: MovieResponse) -> [MovieEntity] {
         response.results.map { object -> MovieEntity in
             MovieEntity(popularity: object.popularity,
                         voteCount: object.vote_count,
@@ -27,6 +27,12 @@ struct MovieConverter {
                         overview: object.overview,
                         releaseDate: object.release_date)
         }
+    }
+    
+    static func fromEntityToDTO(_ entity: MovieEntity) -> MovieDTO {
+        MovieDTO(id: entity.id,
+                 posterPath: entity.posterPath,
+                 title: entity.title)
     }
     
 }

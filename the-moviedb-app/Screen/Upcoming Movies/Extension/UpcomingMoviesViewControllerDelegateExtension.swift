@@ -10,17 +10,20 @@ import UIKit
 
 extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        self.movies.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PosterWithDescriptionCollectionViewCell.self), for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PosterWithDescriptionCollectionViewCell.self),
+                                                            for: indexPath) as? PosterWithDescriptionCollectionViewCell else { return UICollectionViewCell() }
+
+        cell.set(title: self.movies[indexPath.row].title, posterImage: "")
 
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (self.view.frame.width / 2) - 16 , height: 250)
+        CGSize(width: (self.view.frame.width / 2) - 16 , height: 250)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -40,5 +43,31 @@ extension UpcomingMoviesViewController: UISearchBarDelegate {
         }
         
         // MARK: TODO
+    }
+}
+
+extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
+    func showLoader() {
+        super.showActivityLoader()
+    }
+    
+    func hideLoader() {
+        super.hideActivityLoader()
+    }
+    
+    func set(movies: [MovieDTO]) {
+        self.movies = movies
+    }
+    
+    func emptyMoviesResponse() {
+        
+    }
+    
+    func errorFetchingMovies() {
+        
+    }
+    
+    func showMovieDetails() {
+        
     }
 }

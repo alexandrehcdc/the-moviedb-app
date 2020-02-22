@@ -21,7 +21,6 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
     lazy var descriptionLabel: UILabel! = {
         let label = UILabel()
         
-        label.text          = "Very big movie name cant tell"
         label.textColor     = .label
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -41,7 +40,7 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
         self.descriptionLabel = nil
     }
     
-    func setupLayout() {
+    private func setupLayout() {
         self.addSubviews(posterImageView, descriptionLabel)
         
         posterImageView.anchor(top: self.topAnchor,
@@ -62,6 +61,10 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
                                                       right: 0),
                                 size: CGSize(width: self.frame.width,
                                              height: 50))
+    }
+    
+    func set(title: String, posterImage: String) {
+        self.descriptionLabel.text = title
     }
     
     required init?(coder: NSCoder) {

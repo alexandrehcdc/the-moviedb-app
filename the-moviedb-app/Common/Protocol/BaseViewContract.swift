@@ -1,5 +1,5 @@
 //
-//  MovieDTO.swift
+//  BaseViewContract.swift
 //  the-moviedb-app
 //
 //  Created by Alexandre Henrique on 2/22/20.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct MovieDTO {
-    let id: Int
-    let posterPath: String?
-    let title: String
+protocol BaseViewContract: AnyObject {
+    func showLoader()
+    func hideLoader()
 }

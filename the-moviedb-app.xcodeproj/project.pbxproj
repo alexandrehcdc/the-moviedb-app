@@ -12,6 +12,10 @@
 		45AA143C23FF6C5400CC6F6F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA143B23FF6C5400CC6F6F /* UIViewExtension.swift */; };
 		45AA143E23FF721300CC6F6F /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA143D23FF721300CC6F6F /* UIFontExtension.swift */; };
 		45AA14402400005600CC6F6F /* UpcomingMoviesViewControllerLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA143F2400005600CC6F6F /* UpcomingMoviesViewControllerLayoutExtension.swift */; };
+		45AA14452400AF8000CC6F6F /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA14442400AF8000CC6F6F /* AppStrings.swift */; };
+		45AA14482400B02500CC6F6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45AA144A2400B02500CC6F6F /* Localizable.strings */; };
+		45AA14502400B49800CC6F6F /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA144F2400B49800CC6F6F /* URLBuilder.swift */; };
+		45AA14542400BD2700CC6F6F /* LanguageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA14532400BD2700CC6F6F /* LanguageEnum.swift */; };
 		45B7CD6123FF23FA0014821B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7CD6023FF23FA0014821B /* AppDelegate.swift */; };
 		45B7CD6323FF23FA0014821B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7CD6223FF23FA0014821B /* SceneDelegate.swift */; };
 		45B7CD6523FF23FA0014821B /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7CD6423FF23FA0014821B /* UpcomingViewController.swift */; };
@@ -52,6 +56,12 @@
 		45AA143B23FF6C5400CC6F6F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		45AA143D23FF721300CC6F6F /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		45AA143F2400005600CC6F6F /* UpcomingMoviesViewControllerLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesViewControllerLayoutExtension.swift; sourceTree = "<group>"; };
+		45AA14442400AF8000CC6F6F /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		45AA14492400B02500CC6F6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		45AA144B2400B04900CC6F6F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		45AA144C2400B04900CC6F6F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		45AA144F2400B49800CC6F6F /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		45AA14532400BD2700CC6F6F /* LanguageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageEnum.swift; sourceTree = "<group>"; };
 		45B7CD5D23FF23FA0014821B /* the-moviedb-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "the-moviedb-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B7CD6023FF23FA0014821B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45B7CD6223FF23FA0014821B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +139,9 @@
 		45AA143423FF69DB00CC6F6F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				45AA144E2400B48000CC6F6F /* Enum */,
+				45AA144D2400B47B00CC6F6F /* Network */,
+				45AA14432400AF6D00CC6F6F /* Localization */,
 				45AA143A23FF6C1700CC6F6F /* Extension */,
 				45AA143523FF69EE00CC6F6F /* Component */,
 			);
@@ -166,6 +179,31 @@
 				45AA143D23FF721300CC6F6F /* UIFontExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		45AA14432400AF6D00CC6F6F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				45AA14442400AF8000CC6F6F /* AppStrings.swift */,
+				45AA144A2400B02500CC6F6F /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		45AA144D2400B47B00CC6F6F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				45AA144F2400B49800CC6F6F /* URLBuilder.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		45AA144E2400B48000CC6F6F /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				45AA14532400BD2700CC6F6F /* LanguageEnum.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		45B7CD5423FF23FA0014821B = {
@@ -333,6 +371,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 45B7CD5423FF23FA0014821B;
 			productRefGroup = 45B7CD5E23FF23FA0014821B /* Products */;
@@ -352,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45B7CD6D23FF23FC0014821B /* LaunchScreen.storyboard in Resources */,
+				45AA14482400B02500CC6F6F /* Localizable.strings in Resources */,
 				45B7CD6A23FF23FC0014821B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,13 +486,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45AA14452400AF8000CC6F6F /* AppStrings.swift in Sources */,
 				45AA143C23FF6C5400CC6F6F /* UIViewExtension.swift in Sources */,
 				45AA143223FF67FA00CC6F6F /* UpcomingMoviesViewControllerDelegateExtension.swift in Sources */,
 				45B7CD6523FF23FA0014821B /* UpcomingViewController.swift in Sources */,
 				45AA14402400005600CC6F6F /* UpcomingMoviesViewControllerLayoutExtension.swift in Sources */,
+				45AA14502400B49800CC6F6F /* URLBuilder.swift in Sources */,
 				45AA143E23FF721300CC6F6F /* UIFontExtension.swift in Sources */,
 				45B7CD6123FF23FA0014821B /* AppDelegate.swift in Sources */,
 				45AA143923FF6A4400CC6F6F /* PosterWithDescriptionCollectionViewCell.swift in Sources */,
+				45AA14542400BD2700CC6F6F /* LanguageEnum.swift in Sources */,
 				45B7CD6323FF23FA0014821B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,10 +532,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		45AA144A2400B02500CC6F6F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45AA14492400B02500CC6F6F /* en */,
+				45AA144C2400B04900CC6F6F /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		45B7CD6B23FF23FC0014821B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				45B7CD6C23FF23FC0014821B /* Base */,
+				45AA144B2400B04900CC6F6F /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -504,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -564,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

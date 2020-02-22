@@ -18,16 +18,18 @@ class UpcomingMoviesViewController: UICollectionViewController {
         
         label.font      = UIFont.helveticaNeue(size: 20)
         label.textColor = .label
-        label.text      = "Upcoming Movies"
+        label.text      = AppStrings.upcoming_movies.capitalized
         
         return label
     }()
     
     lazy var searchBarButtonItem: UIBarButtonItem! = {
-        let searchBar = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchBarDidPress))
-        searchBar.tintColor = .label
+        let searchBarItem       = UIBarButtonItem(barButtonSystemItem: .search,
+                                                  target: self,
+                                                  action: #selector(searchBarDidPress))
+        searchBarItem.tintColor = .label
         
-        return searchBar
+        return searchBarItem
     }()
     
     lazy var searchBar: UISearchBar! = {
@@ -40,7 +42,16 @@ class UpcomingMoviesViewController: UICollectionViewController {
         
         return searchBar
     }()
-
+    
+    lazy var moreOptionsBarButtonItem: UIBarButtonItem! = {
+        let buttonItem       = UIBarButtonItem(barButtonSystemItem: .action,
+                                               target: self,
+                                               action: #selector(moreOptionsDidPress))
+        buttonItem.tintColor = .label
+        
+        return buttonItem
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,9 +59,13 @@ class UpcomingMoviesViewController: UICollectionViewController {
     }
     
     @objc func searchBarDidPress(sender: UIBarButtonItem) {
-        self.navigationItem.rightBarButtonItem = nil
+        self.toggleNavigationBarItems()
         
-        self.navigationItem.setLeftBarButton(UIBarButtonItem(customView: self.searchBar), animated: true)
+        // MARK: TODO
+    }
+    
+    @objc func moreOptionsDidPress(sender: UIBarButtonItem) {
+        // MARK: TODO
     }
 
 }

@@ -12,7 +12,7 @@ extension UpcomingMoviesViewController {
     
     func setLayout() {
         self.navigationItem.titleView          = self.navigationTitleLabel
-        self.navigationItem.rightBarButtonItem = self.searchBarButtonItem
+        self.navigationItem.setRightBarButtonItems([self.moreOptionsBarButtonItem, self.searchBarButtonItem], animated: false)
         self.collectionView.backgroundColor    = .secondarySystemBackground
         collectionView.register(PosterWithDescriptionCollectionViewCell.self,
                                 forCellWithReuseIdentifier: String(describing: PosterWithDescriptionCollectionViewCell.self))
@@ -22,11 +22,11 @@ extension UpcomingMoviesViewController {
     
     func toggleNavigationBarItems() {
         if self.navigationItem.rightBarButtonItem != nil {
-            self.navigationItem.rightBarButtonItem = nil
+            self.navigationItem.rightBarButtonItems = nil
             self.navigationItem.setLeftBarButton(UIBarButtonItem(customView: self.searchBar), animated: true)
         } else {
             self.navigationItem.leftBarButtonItem = nil
-            self.navigationItem.setRightBarButton(self.searchBarButtonItem, animated: true)
+            self.navigationItem.setRightBarButtonItems([self.moreOptionsBarButtonItem, self.searchBarButtonItem], animated: true)
         }
     }
     

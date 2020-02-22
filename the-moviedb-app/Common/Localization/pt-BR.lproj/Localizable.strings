@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  the-moviedb-app
+
+  Created by Alexandre Henrique on 2/21/20.
+  Copyright © 2020 Alexandre Henrique. All rights reserved.
+*/
+
+// MARK: App description strings
+"app_version_name" = "versão";
+"app_name"         = "The MovieDB App";
+
+// MARK: Movie related strings
+"upcoming_movies" = "próximos filmes";

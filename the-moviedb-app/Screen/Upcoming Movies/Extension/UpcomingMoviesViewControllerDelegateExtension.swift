@@ -39,6 +39,21 @@ extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
         30
     }
     
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == movies.count - 1 {
+            
+            let totalPages = isSearchActive ? self.filteredMovies[indexPath.row].totalPages : self.movies[indexPath.row].totalPages
+            
+            if self.currentPage < totalPages {
+                self.currentPage += 1
+                self.presenter.fetchMovies(page: self.currentPage)
+                return
+            }
+            
+            return
+        }
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if self.isSearchActive {
@@ -85,7 +100,7 @@ extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
     }
     
     func set(movies: [MovieDTO]) {
-        self.movies = movies
+        self.movies += movies
     }
     
     func emptyMoviesResponse() {

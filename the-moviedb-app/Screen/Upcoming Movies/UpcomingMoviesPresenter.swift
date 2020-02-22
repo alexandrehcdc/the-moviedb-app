@@ -18,10 +18,10 @@ struct UpcomingMoviesPresenter: UpcomingMoviesPresenterContract {
         self.getMovieUseCase = InjectionUseCase.provideGetMovieUseCase()
     }
     
-    func fetchMovies() {
+    func fetchMovies(page: Int) {
         self.view.showLoader()
         
-        self.getMovieUseCase.fetchUpcomingMovies(page: 1) { response in
+        self.getMovieUseCase.fetchUpcomingMovies(page: page) { response in
             self.view.hideLoader()
             
             response.onSuccess { (entities) in

@@ -11,22 +11,19 @@ import UIKit
 class UpcomingMoviesViewController: UICollectionViewController {
     
     var isSearchActive: Bool = false
+    var currentPage: Int     = 1
     
     var searchTaskManager: DispatchWorkItem!
     
     var movies: [MovieDTO] = [] {
         didSet {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+            DispatchQueue.main.async { self.collectionView.reloadData() }
         }
     }
     
     var filteredMovies: [MovieDTO] = [] {
         didSet {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+            DispatchQueue.main.async { self.collectionView.reloadData() }
         }
     }
     
@@ -45,7 +42,7 @@ class UpcomingMoviesViewController: UICollectionViewController {
         return label
     }()
     
-    lazy var searchBarButtonItem: UIBarButtonItem! = {
+    lazy var searchBarButtonItem: UIBarButtonItem! = { [unowned self] in
         let searchBarItem       = UIBarButtonItem(barButtonSystemItem: .search,
                                                   target: self,
                                                   action: #selector(searchBarDidPress))
@@ -54,7 +51,7 @@ class UpcomingMoviesViewController: UICollectionViewController {
         return searchBarItem
     }()
     
-    lazy var searchBar: UISearchBar! = {
+    lazy var searchBar: UISearchBar! = { [unowned self] in
         let searchBar = UISearchBar(frame: CGRect(x: 0,
                                                   y: 0,
                                                   width: self.view.frame.width,
@@ -65,10 +62,10 @@ class UpcomingMoviesViewController: UICollectionViewController {
         return searchBar
     }()
     
-    lazy var moreOptionsBarButtonItem: UIBarButtonItem! = {
-        let buttonItem       = UIBarButtonItem(barButtonSystemItem: .action,
-                                               target: self,
-                                               action: #selector(moreOptionsDidPress))
+    lazy var moreOptionsBarButtonItem: UIBarButtonItem! = { [unowned self] in
+        let buttonItem = UIBarButtonItem(barButtonSystemItem: .action,
+                                         target: self,
+                                         action: #selector(moreOptionsDidPress))
         buttonItem.tintColor = .label
         
         return buttonItem
@@ -87,7 +84,7 @@ class UpcomingMoviesViewController: UICollectionViewController {
 
         self.setLayout()
         
-        self.presenter.fetchMovies()
+        self.presenter.fetchMovies(page: self.currentPage)
     }
     
     @objc func searchBarDidPress(sender: UIBarButtonItem) {
@@ -101,4 +98,3 @@ class UpcomingMoviesViewController: UICollectionViewController {
     }
 
 }
-

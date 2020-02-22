@@ -12,4 +12,6 @@ struct MovieDTO {
     let id: Int
     let title: String
     let posterURL: URL?
+    let page: Int
+    let totalPages: Int
 }

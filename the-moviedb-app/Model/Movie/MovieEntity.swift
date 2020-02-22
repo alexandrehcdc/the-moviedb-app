@@ -23,4 +23,6 @@ struct MovieEntity {
     let voteAverage: Float
     let overview: String
     let releaseDate: String
+    let page: Int
+    let totalPages: Int
 }

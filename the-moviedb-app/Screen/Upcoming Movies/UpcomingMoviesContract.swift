@@ -16,5 +16,5 @@ protocol UpcomingMoviesViewContract: BaseViewContract {
 }
 
 protocol UpcomingMoviesPresenterContract {
-    func fetchMovies()
+    func fetchMovies(page: Int)
 }

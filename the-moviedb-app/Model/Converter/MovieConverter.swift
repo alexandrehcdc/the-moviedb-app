@@ -25,7 +25,9 @@ struct MovieConverter {
                         title: object.title,
                         voteAverage: object.vote_average,
                         overview: object.overview,
-                        releaseDate: object.release_date)
+                        releaseDate: object.release_date,
+                        page: response.page,
+                        totalPages: response.total_pages)
         }
     }
     
@@ -33,7 +35,9 @@ struct MovieConverter {
         MovieDTO(id: entity.id,
                  title: entity.title,
                  posterURL: URLBuilder.getPosterImage(path: entity.posterPath ?? "",
-                                                      imageSize: posterSize))
+                                                      imageSize: posterSize),
+                 page: entity.page,
+                 totalPages: entity.totalPages)
     }
     
 }

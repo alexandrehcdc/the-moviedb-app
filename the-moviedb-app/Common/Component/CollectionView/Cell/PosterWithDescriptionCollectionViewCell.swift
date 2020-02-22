@@ -10,10 +10,20 @@ import UIKit
 
 class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
     
-    lazy var posterImageView: UIImageView! = {
+    lazy var activityIndicator: UIActivityIndicatorView! = {
+        let indicator = UIActivityIndicatorView(style: .large)
+        
+        indicator.color = .gray
+        
+        return indicator
+    }()
+    
+    lazy var posterImageView: UIImageView! = { [unowned self] in
         let imageView = UIImageView()
         
-        imageView.backgroundColor = .orange
+        imageView.contentMode        = .scaleAspectFit
+        imageView.layer.cornerRadius = 10
+        imageView.clipsToBounds      = true
         
         return imageView
     }()
@@ -36,8 +46,9 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
     }
     
     deinit {
-        self.posterImageView  = nil
-        self.descriptionLabel = nil
+        self.activityIndicator = nil
+        self.posterImageView   = nil
+        self.descriptionLabel  = nil
     }
     
     private func setupLayout() {
@@ -46,7 +57,7 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
         posterImageView.anchor(top: self.topAnchor,
                                leading: self.leadingAnchor,
                                trailing: self.trailingAnchor,
-                               padding: UIEdgeInsets(top: 0,
+                               padding: UIEdgeInsets(top: 8,
                                                      left: 16,
                                                      bottom: 0,
                                                      right: 16))
@@ -63,8 +74,14 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
                                              height: 50))
     }
     
-    func set(title: String, posterImage: String) {
+    func set(title: String, posterImage: URL?) {
         self.descriptionLabel.text = title
+        
+        self.posterImageView.addSubview(self.activityIndicator)
+        self.activityIndicator.center = self.center
+        
+        self.posterImageView.showImageWith(path: posterImage,
+                                           activityIndicator: self.activityIndicator)
     }
     
     required init?(coder: NSCoder) {

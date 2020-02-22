@@ -17,13 +17,17 @@ extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PosterWithDescriptionCollectionViewCell.self),
                                                             for: indexPath) as? PosterWithDescriptionCollectionViewCell else { return UICollectionViewCell() }
 
-        cell.set(title: self.movies[indexPath.row].title, posterImage: "")
+        cell.set(title: self.movies[indexPath.row].title,
+                 posterImage: self.movies[indexPath.row].posterURL)
 
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: (self.view.frame.width / 2) - 16 , height: 250)
+        
+        let cellWidth = (self.collectionView.frame.width / 2) - 16
+        
+        return CGSize(width: cellWidth , height: cellWidth * 1.5)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

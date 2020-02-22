@@ -10,17 +10,22 @@ import UIKit
 
 extension UIViewController {
 
-    private static let activityIndicator = UIActivityIndicatorView(style: .large)
+    private static let activityIndicator = { () -> UIActivityIndicatorView in
+        let indicator = UIActivityIndicatorView(style: .large)
+        
+        indicator.color            = .systemGray
+        indicator.hidesWhenStopped = true
+        
+        return indicator
+    }()
 
     func showActivityLoader() {
         DispatchQueue.main.async {
-            UIViewController.activityIndicator.center           = self.view.center
-            UIViewController.activityIndicator.color            = .darkGray
-            UIViewController.activityIndicator.hidesWhenStopped = true
+            UIViewController.activityIndicator.center  = self.view.center
+            self.view.window?.isUserInteractionEnabled = false
             
             self.view.addSubview(UIViewController.activityIndicator)
             
-            self.view.window?.isUserInteractionEnabled = false
             UIViewController.activityIndicator.startAnimating()
         }
     }

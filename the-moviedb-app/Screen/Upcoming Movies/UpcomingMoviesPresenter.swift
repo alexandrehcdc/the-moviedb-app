@@ -25,7 +25,7 @@ struct UpcomingMoviesPresenter: UpcomingMoviesPresenterContract {
             self.view.hideLoader()
             
             response.onSuccess { (entities) in
-                let mappedMovies = entities.map { MovieConverter.fromEntityToDTO($0) }
+                let mappedMovies = entities.map { MovieConverter.fromEntityToDTO($0, posterSize: 200) }
                 
                 self.view.set(movies: mappedMovies)
             }

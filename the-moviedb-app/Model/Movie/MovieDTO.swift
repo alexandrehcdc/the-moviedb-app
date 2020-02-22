@@ -10,6 +10,6 @@ import Foundation
 
 struct MovieDTO {
     let id: Int
-    let posterPath: String?
     let title: String
+    let posterURL: URL?
 }

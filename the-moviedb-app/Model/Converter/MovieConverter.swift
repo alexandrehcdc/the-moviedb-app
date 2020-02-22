@@ -29,10 +29,11 @@ struct MovieConverter {
         }
     }
     
-    static func fromEntityToDTO(_ entity: MovieEntity) -> MovieDTO {
+    static func fromEntityToDTO(_ entity: MovieEntity, posterSize: Int) -> MovieDTO {
         MovieDTO(id: entity.id,
-                 posterPath: entity.posterPath,
-                 title: entity.title)
+                 title: entity.title,
+                 posterURL: URLBuilder.getPosterImage(path: entity.posterPath ?? "",
+                                                      imageSize: posterSize))
     }
     
 }

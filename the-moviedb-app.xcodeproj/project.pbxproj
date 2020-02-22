@@ -11,6 +11,7 @@
 		45A42D2024017BD10078CF75 /* UpcomingMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D1F24017BD10078CF75 /* UpcomingMoviesPresenter.swift */; };
 		45A42D2324017DB90078CF75 /* BaseViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D2224017DB90078CF75 /* BaseViewContract.swift */; };
 		45A42D2524017E040078CF75 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D2424017E040078CF75 /* UIViewControllerExtension.swift */; };
+		45A42D272401A34A0078CF75 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D262401A34A0078CF75 /* UIImageViewExtension.swift */; };
 		45AA143223FF67FA00CC6F6F /* UpcomingMoviesViewControllerDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA143123FF67FA00CC6F6F /* UpcomingMoviesViewControllerDelegateExtension.swift */; };
 		45AA143923FF6A4400CC6F6F /* PosterWithDescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA143823FF6A4400CC6F6F /* PosterWithDescriptionCollectionViewCell.swift */; };
 		45AA143C23FF6C5400CC6F6F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA143B23FF6C5400CC6F6F /* UIViewExtension.swift */; };
@@ -70,6 +71,7 @@
 		45A42D1F24017BD10078CF75 /* UpcomingMoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesPresenter.swift; sourceTree = "<group>"; };
 		45A42D2224017DB90078CF75 /* BaseViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewContract.swift; sourceTree = "<group>"; };
 		45A42D2424017E040078CF75 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		45A42D262401A34A0078CF75 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		45AA143123FF67FA00CC6F6F /* UpcomingMoviesViewControllerDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesViewControllerDelegateExtension.swift; sourceTree = "<group>"; };
 		45AA143823FF6A4400CC6F6F /* PosterWithDescriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterWithDescriptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		45AA143B23FF6C5400CC6F6F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				45AA143D23FF721300CC6F6F /* UIFontExtension.swift */,
 				45AA14652401640200CC6F6F /* CodableExtension.swift */,
 				45A42D2424017E040078CF75 /* UIViewControllerExtension.swift */,
+				45A42D262401A34A0078CF75 /* UIImageViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				45AA1462240161C000CC6F6F /* MovieDTO.swift in Sources */,
 				45AA14452400AF8000CC6F6F /* AppStrings.swift in Sources */,
 				45AA14662401640300CC6F6F /* CodableExtension.swift in Sources */,
+				45A42D272401A34A0078CF75 /* UIImageViewExtension.swift in Sources */,
 				45A42D2024017BD10078CF75 /* UpcomingMoviesPresenter.swift in Sources */,
 				45AA14572401594C00CC6F6F /* GetMovieUseCase.swift in Sources */,
 				45AA143C23FF6C5400CC6F6F /* UIViewExtension.swift in Sources */,

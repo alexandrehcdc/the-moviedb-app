@@ -73,6 +73,8 @@ class UpcomingMoviesViewController: UICollectionViewController {
         super.viewDidLoad()
 
         self.setLayout()
+        
+        self.presenter.fetchMovies()
     }
     
     @objc func searchBarDidPress(sender: UIBarButtonItem) {
@@ -83,7 +85,6 @@ class UpcomingMoviesViewController: UICollectionViewController {
     
     @objc func moreOptionsDidPress(sender: UIBarButtonItem) {
         // MARK: TODO
-        self.presenter.fetchMovies()
     }
 
 }

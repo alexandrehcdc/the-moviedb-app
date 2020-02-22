@@ -14,7 +14,7 @@ struct URLBuilder {
     private static let moviesPath = "/3/movie"
     private static let apiKey     = "c5850ed73901b8d268d0898a8a9d8bff"
     
-    static func grantUpcomingMoviesURL(language: String? = nil, page: Int = 1) -> URL? {
+    static func grantUpcomingMoviesURL(page: Int) -> URL? {
         var components = URLComponents()
         
         components.scheme     = URLBuilder.scheme
@@ -23,10 +23,9 @@ struct URLBuilder {
         components.queryItems = [
             URLBuilder.getAPIKeyQueryItem(),
             URLQueryItem(name: "region", value: Locale.current.regionCode),
+            URLQueryItem(name: "language", value: Locale.current.languageCode),
             URLQueryItem(name: "page", value: "\(page)")
         ]
-        
-        if let language = language { components.queryItems?.append(URLQueryItem(name: "language", value: language)) }
         
         return components.url
     }

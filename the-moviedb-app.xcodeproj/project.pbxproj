@@ -16,6 +16,17 @@
 		45AA14482400B02500CC6F6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45AA144A2400B02500CC6F6F /* Localizable.strings */; };
 		45AA14502400B49800CC6F6F /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA144F2400B49800CC6F6F /* URLBuilder.swift */; };
 		45AA14542400BD2700CC6F6F /* LanguageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA14532400BD2700CC6F6F /* LanguageEnum.swift */; };
+		45AA14572401594C00CC6F6F /* GetMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA14562401594C00CC6F6F /* GetMovieUseCase.swift */; };
+		45AA14592401597C00CC6F6F /* InjectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA14582401597C00CC6F6F /* InjectionUseCase.swift */; };
+		45AA145B240159C700CC6F6F /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA145A240159C700CC6F6F /* BaseCallback.swift */; };
+		45AA145D24015A0F00CC6F6F /* TypedCallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA145C24015A0F00CC6F6F /* TypedCallbackEnum.swift */; };
+		45AA1462240161C000CC6F6F /* MovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA1461240161C000CC6F6F /* MovieDTO.swift */; };
+		45AA1464240163DC00CC6F6F /* GenericRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA1463240163DC00CC6F6F /* GenericRequest.swift */; };
+		45AA14662401640300CC6F6F /* CodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA14652401640200CC6F6F /* CodableExtension.swift */; };
+		45AA14682401642A00CC6F6F /* HTTPOperationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA14672401642A00CC6F6F /* HTTPOperationEnum.swift */; };
+		45AA146A2401654800CC6F6F /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA14692401654800CC6F6F /* MovieResponse.swift */; };
+		45AA146D2401693500CC6F6F /* MovieConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA146C2401693500CC6F6F /* MovieConverter.swift */; };
+		45AA146F2401694F00CC6F6F /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA146E2401694F00CC6F6F /* MovieEntity.swift */; };
 		45B7CD6123FF23FA0014821B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7CD6023FF23FA0014821B /* AppDelegate.swift */; };
 		45B7CD6323FF23FA0014821B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7CD6223FF23FA0014821B /* SceneDelegate.swift */; };
 		45B7CD6523FF23FA0014821B /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7CD6423FF23FA0014821B /* UpcomingViewController.swift */; };
@@ -62,6 +73,17 @@
 		45AA144C2400B04900CC6F6F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		45AA144F2400B49800CC6F6F /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		45AA14532400BD2700CC6F6F /* LanguageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageEnum.swift; sourceTree = "<group>"; };
+		45AA14562401594C00CC6F6F /* GetMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieUseCase.swift; sourceTree = "<group>"; };
+		45AA14582401597C00CC6F6F /* InjectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionUseCase.swift; sourceTree = "<group>"; };
+		45AA145A240159C700CC6F6F /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
+		45AA145C24015A0F00CC6F6F /* TypedCallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedCallbackEnum.swift; sourceTree = "<group>"; };
+		45AA1461240161C000CC6F6F /* MovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDTO.swift; sourceTree = "<group>"; };
+		45AA1463240163DC00CC6F6F /* GenericRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRequest.swift; sourceTree = "<group>"; };
+		45AA14652401640200CC6F6F /* CodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtension.swift; sourceTree = "<group>"; };
+		45AA14672401642A00CC6F6F /* HTTPOperationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPOperationEnum.swift; sourceTree = "<group>"; };
+		45AA14692401654800CC6F6F /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		45AA146C2401693500CC6F6F /* MovieConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieConverter.swift; sourceTree = "<group>"; };
+		45AA146E2401694F00CC6F6F /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		45B7CD5D23FF23FA0014821B /* the-moviedb-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "the-moviedb-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B7CD6023FF23FA0014821B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45B7CD6223FF23FA0014821B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +161,7 @@
 		45AA143423FF69DB00CC6F6F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				45AA14552401590100CC6F6F /* Use Case */,
 				45AA144E2400B48000CC6F6F /* Enum */,
 				45AA144D2400B47B00CC6F6F /* Network */,
 				45AA14432400AF6D00CC6F6F /* Localization */,
@@ -177,6 +200,7 @@
 			children = (
 				45AA143B23FF6C5400CC6F6F /* UIViewExtension.swift */,
 				45AA143D23FF721300CC6F6F /* UIFontExtension.swift */,
+				45AA14652401640200CC6F6F /* CodableExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -194,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				45AA144F2400B49800CC6F6F /* URLBuilder.swift */,
+				45AA145A240159C700CC6F6F /* BaseCallback.swift */,
+				45AA1463240163DC00CC6F6F /* GenericRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -202,8 +228,54 @@
 			isa = PBXGroup;
 			children = (
 				45AA14532400BD2700CC6F6F /* LanguageEnum.swift */,
+				45AA145C24015A0F00CC6F6F /* TypedCallbackEnum.swift */,
+				45AA14672401642A00CC6F6F /* HTTPOperationEnum.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		45AA14552401590100CC6F6F /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				45AA14562401594C00CC6F6F /* GetMovieUseCase.swift */,
+				45AA14582401597C00CC6F6F /* InjectionUseCase.swift */,
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
+		45AA145E2401619C00CC6F6F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				45AA142F23FF67BC00CC6F6F /* Upcoming Movies */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		45AA145F240161AB00CC6F6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45AA146B2401692900CC6F6F /* Converter */,
+				45AA1460240161B200CC6F6F /* Movie */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45AA1460240161B200CC6F6F /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				45AA1461240161C000CC6F6F /* MovieDTO.swift */,
+				45AA14692401654800CC6F6F /* MovieResponse.swift */,
+				45AA146E2401694F00CC6F6F /* MovieEntity.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		45AA146B2401692900CC6F6F /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				45AA146C2401693500CC6F6F /* MovieConverter.swift */,
+			);
+			path = Converter;
 			sourceTree = "<group>";
 		};
 		45B7CD5423FF23FA0014821B = {
@@ -232,8 +304,9 @@
 			isa = PBXGroup;
 			children = (
 				45AA143323FF69D100CC6F6F /* App Delegate */,
-				45AA142F23FF67BC00CC6F6F /* Upcoming Movies */,
+				45AA145E2401619C00CC6F6F /* Screen */,
 				45B7CD6923FF23FC0014821B /* Assets.xcassets */,
+				45AA145F240161AB00CC6F6F /* Model */,
 				45AA143423FF69DB00CC6F6F /* Common */,
 				45B7CD6B23FF23FC0014821B /* LaunchScreen.storyboard */,
 				45B7CD6E23FF23FC0014821B /* Info.plist */,
@@ -486,17 +559,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45AA14682401642A00CC6F6F /* HTTPOperationEnum.swift in Sources */,
+				45AA146A2401654800CC6F6F /* MovieResponse.swift in Sources */,
+				45AA1462240161C000CC6F6F /* MovieDTO.swift in Sources */,
 				45AA14452400AF8000CC6F6F /* AppStrings.swift in Sources */,
+				45AA14662401640300CC6F6F /* CodableExtension.swift in Sources */,
+				45AA14572401594C00CC6F6F /* GetMovieUseCase.swift in Sources */,
 				45AA143C23FF6C5400CC6F6F /* UIViewExtension.swift in Sources */,
 				45AA143223FF67FA00CC6F6F /* UpcomingMoviesViewControllerDelegateExtension.swift in Sources */,
+				45AA146D2401693500CC6F6F /* MovieConverter.swift in Sources */,
+				45AA146F2401694F00CC6F6F /* MovieEntity.swift in Sources */,
 				45B7CD6523FF23FA0014821B /* UpcomingViewController.swift in Sources */,
 				45AA14402400005600CC6F6F /* UpcomingMoviesViewControllerLayoutExtension.swift in Sources */,
 				45AA14502400B49800CC6F6F /* URLBuilder.swift in Sources */,
 				45AA143E23FF721300CC6F6F /* UIFontExtension.swift in Sources */,
+				45AA1464240163DC00CC6F6F /* GenericRequest.swift in Sources */,
 				45B7CD6123FF23FA0014821B /* AppDelegate.swift in Sources */,
 				45AA143923FF6A4400CC6F6F /* PosterWithDescriptionCollectionViewCell.swift in Sources */,
 				45AA14542400BD2700CC6F6F /* LanguageEnum.swift in Sources */,
+				45AA145B240159C700CC6F6F /* BaseCallback.swift in Sources */,
 				45B7CD6323FF23FA0014821B /* SceneDelegate.swift in Sources */,
+				45AA145D24015A0F00CC6F6F /* TypedCallbackEnum.swift in Sources */,
+				45AA14592401597C00CC6F6F /* InjectionUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

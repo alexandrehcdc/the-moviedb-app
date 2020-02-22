@@ -19,8 +19,9 @@ struct AppStrings {
     // MARK: Movie related strings
     public static let upcoming_movies = localized("upcoming_movies")
     
-    //MARK: Localization function
+    // MARK: Localization function
     public static func localized(_ value: String) -> String {
         NSLocalizedString(value, tableName: nil, bundle: Bundle.main, value: String(), comment: String())
     }
+    
 }

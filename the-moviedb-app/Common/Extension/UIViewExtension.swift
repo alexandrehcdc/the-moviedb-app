@@ -9,6 +9,34 @@
 import UIKit
 
 extension UIView {
+    
+    private static let activityIndicator = { () -> UIActivityIndicatorView in
+        let indicator = UIActivityIndicatorView(style: .large)
+        
+        indicator.color            = .systemGray
+        indicator.hidesWhenStopped = true
+        
+        return indicator
+    }()
+
+    func showActivityLoader() {
+        DispatchQueue.main.async {
+            UIView.activityIndicator.center       = self.center
+            self.window?.isUserInteractionEnabled = false
+            
+            self.addSubview(UIView.activityIndicator)
+            
+            UIView.activityIndicator.startAnimating()
+        }
+    }
+
+    func hideActivityLoader() {
+        DispatchQueue.main.async {
+            UIView.activityIndicator.removeFromSuperview()
+            self.window?.isUserInteractionEnabled = true
+        }
+    }
+    
     func removeSubviews() {
         self.subviews.forEach { $0.removeFromSuperview() }
     }

@@ -10,16 +10,21 @@ import UIKit
 
 extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.movies.count
+        self.isSearchActive ? self.filteredMovies.count :self.movies.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PosterWithDescriptionCollectionViewCell.self),
                                                             for: indexPath) as? PosterWithDescriptionCollectionViewCell else { return UICollectionViewCell() }
-
-        cell.set(title: self.movies[indexPath.row].title,
-                 posterImage: self.movies[indexPath.row].posterURL)
-
+        
+        if self.isSearchActive {
+            cell.set(title: self.filteredMovies[indexPath.row].title,
+            posterImage: self.filteredMovies[indexPath.row].posterURL)
+        } else {
+            cell.set(title: self.movies[indexPath.row].title,
+                     posterImage: self.movies[indexPath.row].posterURL)
+        }
+        
         return cell
     }
 
@@ -35,28 +40,48 @@ extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // MARK: TODO
+        
+        if self.isSearchActive {
+            print(self.filteredMovies[indexPath.row])
+        } else {
+            print(self.movies[indexPath.row])
+        }
     }
 }
 
 extension UpcomingMoviesViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         if searchText.isEmpty {
+            self.isSearchActive = false
+            self.filteredMovies = self.movies
+            
             self.toggleNavigationBarItems()
+            
             return
         }
         
-        // MARK: TODO
+        self.isSearchActive = true
+        self.searchTaskManager?.cancel()
+        
+        let task = DispatchWorkItem { [unowned self] in
+            self.filteredMovies = self.movies.filter { $0.title.lowercased().contains(searchText.lowercased()) }
+        }
+        
+        self.searchTaskManager = task
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3, execute: self.searchTaskManager)
     }
+    
 }
 
 extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
     func showLoader() {
-        super.showActivityLoader()
+        DispatchQueue.main.async { self.view.showActivityLoader() }
     }
     
     func hideLoader() {
-        super.hideActivityLoader()
+        DispatchQueue.main.async { self.view.hideActivityLoader() }
     }
     
     func set(movies: [MovieDTO]) {

@@ -19,8 +19,7 @@ extension UpcomingMoviesViewController {
         
         collectionView.register(PosterWithDescriptionCollectionViewCell.self,
                                 forCellWithReuseIdentifier: String(describing: PosterWithDescriptionCollectionViewCell.self))
-        
-        
+
     }
     
     func toggleNavigationBarItems() {

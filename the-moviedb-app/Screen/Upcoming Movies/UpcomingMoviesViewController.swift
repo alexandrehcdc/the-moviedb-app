@@ -10,7 +10,19 @@ import UIKit
 
 class UpcomingMoviesViewController: UICollectionViewController {
     
+    var isSearchActive: Bool = false
+    
+    var searchTaskManager: DispatchWorkItem!
+    
     var movies: [MovieDTO] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    var filteredMovies: [MovieDTO] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -67,6 +79,7 @@ class UpcomingMoviesViewController: UICollectionViewController {
         self.searchBarButtonItem      = nil
         self.searchBar                = nil
         self.moreOptionsBarButtonItem = nil
+        self.searchTaskManager        = nil
     }
     
     override func viewDidLoad() {

@@ -22,7 +22,7 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         
         label.text          = "Very big movie name cant tell"
-        label.textColor     = .black
+        label.textColor     = .label
         label.textAlignment = .center
         label.numberOfLines = 0
         label.font          = UIFont.helveticaNeueLight(size: 18)

@@ -16,15 +16,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-         window              = UIWindow(frame: windowScene.coordinateSpace.bounds)
-         window?.windowScene = windowScene
+        window              = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
 
-         let baseVC         = UpcomingMoviesViewController(collectionViewLayout: UICollectionViewFlowLayout())
-         let mainNavigation = UINavigationController(rootViewController: baseVC)
+        let baseVC         = UpcomingMoviesViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let mainNavigation = UINavigationController(rootViewController: baseVC)
          
-         window?.rootViewController = mainNavigation
+        window?.rootViewController = mainNavigation
          
-         window?.makeKeyAndVisible()
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }

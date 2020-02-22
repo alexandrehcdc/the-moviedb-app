@@ -1,5 +1,5 @@
 //
-//  UpcomingMoviesViewControllerCollectionViewExtension.swift
+//  UpcomingMoviesViewControllerDelegateExtension.swift
 //  the-moviedb-app
 //
 //  Created by Alexandre Henrique on 2/20/20.
@@ -15,7 +15,7 @@ extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PosterWithDescriptionCollectionViewCell.self), for: indexPath)
-        
+
         return cell
     }
 
@@ -26,5 +26,19 @@ extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         30
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // MARK: TODO
+    }
 }
 
+extension UpcomingMoviesViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            self.toggleNavigationBarItems()
+            return
+        }
+        
+        // MARK: TODO
+    }
+}

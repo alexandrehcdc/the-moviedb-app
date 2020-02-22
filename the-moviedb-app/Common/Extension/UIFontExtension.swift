@@ -11,7 +11,11 @@ import UIKit
 extension UIFont {
     
     static func helveticaNeueLight(size: CGFloat = 10) -> UIFont? {
-        UIFont(name: "HelveticaNeue-Light", size: 18)
+        UIFont(name: "HelveticaNeue-Light", size: size)
+    }
+    
+    static func helveticaNeue(size: CGFloat = 10) -> UIFont? {
+        UIFont(name: "HelveticaNeue", size: size)
     }
     
 }

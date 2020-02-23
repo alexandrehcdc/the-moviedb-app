@@ -13,8 +13,15 @@ class UpcomingMoviesViewController: UICollectionViewController {
     var isSearchActive: Bool           = false
     var currentPage: Int               = 1
     var availableGenres: [GenreEntity] = []
+    var countryList: [CountryEntity]   = []
     
     var searchTaskManager: DispatchWorkItem!
+    
+    var pickedCountry: String = Locale.current.regionCode ?? "US" {
+        didSet {
+            self.invalidateCurrentMovieSet()
+        }
+    }
     
     var movies: [MovieDTO] = [] {
         didSet {
@@ -29,6 +36,17 @@ class UpcomingMoviesViewController: UICollectionViewController {
     }
     
     lazy var presenter: UpcomingMoviesPresenterContract = UpcomingMoviesPresenter(view: self)
+    
+    lazy var regionPickerView: UIPickerView! = {
+        let pickerView = UIPickerView()
+        
+        pickerView.delegate        = self
+        pickerView.dataSource      = self
+        pickerView.backgroundColor = .tertiarySystemBackground
+        pickerView.tintColor       = .secondaryLabel
+        
+        return pickerView
+    }()
     
     lazy var navigationTitleLabel: UILabel! = {
         let label = UILabel(frame: CGRect(x: 0,
@@ -63,21 +81,31 @@ class UpcomingMoviesViewController: UICollectionViewController {
         return searchBar
     }()
     
-    lazy var moreOptionsBarButtonItem: UIBarButtonItem! = { [unowned self] in
-        let buttonItem = UIBarButtonItem(barButtonSystemItem: .action,
-                                         target: self,
-                                         action: #selector(moreOptionsDidPress))
-        buttonItem.tintColor = .label
+    lazy var locationButton: UIButton! = { [unowned self] in
+        let button = UIButton()
+        let image  = UIImage.marker.withRenderingMode(.alwaysTemplate)
         
-        return buttonItem
+        button.setImage(image, for: .normal)
+        button.imageView?.tintColor = .label
+        button.backgroundColor = .tertiarySystemBackground
+        
+        button.imageEdgeInsets = UIEdgeInsets(top: 12,
+                                              left: 17,
+                                              bottom: 12,
+                                              right: 17)
+        
+        button.addTarget(self, action: #selector(locationButtonDidPress), for: .touchUpInside)
+        
+        return button
     }()
     
     deinit {
-        self.navigationTitleLabel     = nil
-        self.searchBarButtonItem      = nil
-        self.searchBar                = nil
-        self.moreOptionsBarButtonItem = nil
-        self.searchTaskManager        = nil
+        self.navigationTitleLabel = nil
+        self.regionPickerView     = nil
+        self.searchBarButtonItem  = nil
+        self.searchBar            = nil
+        self.locationButton       = nil
+        self.searchTaskManager    = nil
     }
     
     override func viewDidLoad() {
@@ -92,8 +120,34 @@ class UpcomingMoviesViewController: UICollectionViewController {
         self.toggleNavigationBarItems()
     }
     
-    @objc func moreOptionsDidPress(sender: UIBarButtonItem) {
-        // MARK: TODO
+    @objc func locationButtonDidPress(sender: UIButton) {
+        self.composedAlert(title: AppStrings.pick_region.firstCapitalized(),
+        message: AppStrings.pick_region_title.firstCapitalized(),
+        handlersTitles: [AppStrings.brazil.capitalized,
+                         AppStrings.united_states.capitalized,
+                         AppStrings.other_region.capitalized,
+                         AppStrings.cancel.capitalized],
+        handlers: [(brazilRegionPicked, .default),
+                   (americaRegionPicked, .default),
+                   (otherRegionPicked, .default),
+                   (cancelRegionPick, .destructive)])
     }
-
+    
+    private func brazilRegionPicked(action: UIAlertAction) {
+        self.pickedCountry = "BR"
+    }
+    private func americaRegionPicked(action: UIAlertAction) {
+        self.pickedCountry = "US"
+    }
+    private func otherRegionPicked(action: UIAlertAction) {
+        if self.countryList.isEmpty {
+            self.presenter.fetchCoutries()
+            return
+        }
+        
+        self.layPickerView()
+    }
+    
+    private func cancelRegionPick(action: UIAlertAction) { }
+    
 }

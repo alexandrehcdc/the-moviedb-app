@@ -19,5 +19,23 @@ extension UIViewController {
         
         self.present(alert, animated: true)
     }
+    
+    func composedAlert(title: String, message: String, handlersTitles: [String]? = nil, handlers: [(((UIAlertAction) -> Void), UIAlertAction.Style)]? = nil) {
+        
+        guard let mappedHandlers = handlers, let mappedTitles = handlersTitles else {
+            self.alert(title: title, message: message)
+            return
+        }
+        
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        
+        for (title, handler) in zip(mappedTitles, mappedHandlers) {
+            alert.addAction(UIAlertAction(title: title, style: handler.1, handler: handler.0))
+        }
+        
+        self.present(alert, animated: true)
+    }
 }
 

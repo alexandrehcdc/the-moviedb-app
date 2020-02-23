@@ -9,13 +9,18 @@
 import Foundation
 
 extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
-    func set(genres: [GenreEntity]) {
-        self.availableGenres = genres
+    
+    func set(countries: [CountryEntity]) {
+        self.countryList = countries
+        
+        self.layPickerView()
     }
     
-    func getGenres() -> [GenreEntity] {
-        self.availableGenres
-    }
+    func set(genres: [GenreEntity]) { self.availableGenres = genres }
+    
+    func getGenres() -> [GenreEntity] { self.availableGenres }
+    
+    func getCountry() -> String { self.pickedCountry }
     
     func showLoader() {
         DispatchQueue.main.async { self.view.showActivityLoader() }
@@ -25,11 +30,9 @@ extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
         DispatchQueue.main.async { self.view.hideActivityLoader() }
     }
     
-    func set(movies: [MovieDTO]) {
-        self.movies += movies
-    }
+    func set(movies: [MovieDTO]) { self.movies += movies }
     
-    func emptyMoviesResponse() {
+    func emptyResponse() {
         
     }
     
@@ -37,7 +40,10 @@ extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
         
     }
     
-    func showMovieDetails() {
+    func invalidateCurrentMovieSet() {
+        self.currentPage   = 1
+        self.movies        = []
         
+        self.presenter.fetchMovies(page: self.currentPage)
     }
 }

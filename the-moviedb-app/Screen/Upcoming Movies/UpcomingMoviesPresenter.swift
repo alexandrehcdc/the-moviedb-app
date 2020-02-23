@@ -13,11 +13,13 @@ struct UpcomingMoviesPresenter: UpcomingMoviesPresenterContract {
     private unowned let view: UpcomingMoviesViewContract
     private let getMovieUseCase: GetMovieUseCase
     private let getGenreUseCase: GetGenreUseCase
+    private let getConfigurationUseCase: GetConfigurationUseCase
     
     init(view: UpcomingMoviesViewContract) {
-        self.view            = view
-        self.getMovieUseCase = InjectionUseCase.provideGetMovieUseCase()
-        self.getGenreUseCase = InjectionUseCase.provideGetGenreUseCase()
+        self.view                    = view
+        self.getMovieUseCase         = InjectionUseCase.provideGetMovieUseCase()
+        self.getGenreUseCase         = InjectionUseCase.provideGetGenreUseCase()
+        self.getConfigurationUseCase = InjectionUseCase.provideGetConfigurationUseCase()
     }
     
     func fetchGenres() {
@@ -44,7 +46,7 @@ struct UpcomingMoviesPresenter: UpcomingMoviesPresenterContract {
     func fetchMovies(page: Int) {
         self.view.showLoader()
         
-        self.getMovieUseCase.fetchUpcomingMovies(page: page) { response in
+        self.getMovieUseCase.fetchUpcomingMovies(page: page, region: self.view.getCountry()) { response in
             self.view.hideLoader()
             
             response.onSuccess { (entities) in
@@ -56,13 +58,34 @@ struct UpcomingMoviesPresenter: UpcomingMoviesPresenterContract {
             }
             
             response.onEmptyData {
-                self.view.emptyMoviesResponse()
+                self.view.emptyResponse()
             }
             
             response.onFailed { (_) in
                 self.view.errorFetching()
             }
         }
+    }
+    
+    func fetchCoutries() {
+        self.view.showLoader()
+        
+        self.getConfigurationUseCase.fetchCountries { (response) in
+            self.view.hideLoader()
+            
+            response.onSuccess { (countries) in
+                self.view.set(countries: countries)
+            }
+            
+            response.onEmptyData {
+                self.view.emptyResponse()
+            }
+            
+            response.onFailed { (_) in
+                self.view.errorFetching()
+            }
+        }
+        
     }
     
 }

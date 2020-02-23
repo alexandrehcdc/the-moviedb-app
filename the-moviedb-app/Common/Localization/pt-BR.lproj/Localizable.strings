@@ -10,5 +10,16 @@
 "app_version_name" = "versão";
 "app_name"         = "The MovieDB App";
 
+// MARK: General strings
+"idiom"         = "pt-BR";
+"cancel"        = "cancelar";
+"brazil"        = "brasil";
+"united_states" = "estados unidos da américa";
+
+// MARK: Configuration related strings
+"pick_region"       = "selecione uma região";
+"pick_region_title" = "escolha uma região para ver os próximos filmes em cartaz";
+"other_region"      = "outras regiões";
+
 // MARK: Movie related strings
 "upcoming_movies" = "próximos filmes";

@@ -11,11 +11,11 @@ import Foundation
 struct GetMovieUseCase {
     
     typealias MovieObjectsTypedCallback = ((BaseCallback<[MovieEntity]>) -> Void)
-    typealias MovieResponseType = BaseCallback<MovieResponse>
+    typealias MovieResponseType         = BaseCallback<MovieResponse>
     
-    func fetchUpcomingMovies(page: Int? = nil, _ responseCallback: @escaping MovieObjectsTypedCallback) {
+    func fetchUpcomingMovies(page: Int? = nil, region: String, _ responseCallback: @escaping MovieObjectsTypedCallback) {
         
-        guard let url = URLBuilder.grantUpcomingMoviesURL(page: page ?? 1) else { return }
+        guard let url = URLBuilder.grantUpcomingMoviesURL(page: page ?? 1, region: region) else { return }
         
         GenericRequest.get(url: url) { (response: MovieResponseType) in
             

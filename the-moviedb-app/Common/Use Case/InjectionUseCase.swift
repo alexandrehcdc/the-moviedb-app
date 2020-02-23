@@ -18,4 +18,8 @@ struct InjectionUseCase {
         GetGenreUseCase()
     }
     
+    public static func provideGetConfigurationUseCase() -> GetConfigurationUseCase {
+        GetConfigurationUseCase()
+    }
+    
 }

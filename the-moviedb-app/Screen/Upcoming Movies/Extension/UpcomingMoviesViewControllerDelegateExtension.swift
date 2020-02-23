@@ -97,3 +97,24 @@ extension UpcomingMoviesViewController: UISearchBarDelegate {
     }
     
 }
+
+extension UpcomingMoviesViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        self.countryList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        self.countryList[row].englishName
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.pickedCountry = self.countryList[row].isoCode
+        
+        self.invalidateCurrentMovieSet()
+        pickerView.removeFromSuperview()
+    }
+}

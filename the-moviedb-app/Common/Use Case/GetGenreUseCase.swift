@@ -11,7 +11,7 @@ import Foundation
 struct GetGenreUseCase {
 
     typealias GenreObjectsTypedCallback = ((BaseCallback<[GenreEntity]>) -> Void)
-    typealias GenreResponseType = BaseCallback<GenreResponse>
+    typealias GenreResponseType         = BaseCallback<GenreResponse>
     
     func fetchMovieGenres(_ responseCallback: @escaping GenreObjectsTypedCallback) {
         

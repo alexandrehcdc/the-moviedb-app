@@ -10,5 +10,16 @@
 "app_version_name" = "version";
 "app_name"         = "The MovieDB App";
 
+// MARK: General strings
+"idiom"         = "en-US";
+"cancel"        = "cancel";
+"brazil"        = "brazil";
+"united_states" = "united states of america";
+
+// MARK: Configuration related strings
+"pick_region"       = "pick a region";
+"pick_region_title" = "select a region to see the local upcoming movies";
+"other_region"      = "other region";
+
 // MARK: Movie related strings
 "upcoming_movies" = "upcoming movies";

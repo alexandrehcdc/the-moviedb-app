@@ -67,7 +67,7 @@ extension MovieDetailViewController {
                                                            bottom: 0,
                                                            right: 0))
         
-        self.overviewLabel.anchor(top: self.releaseDateLabel.bottomAnchor,
+        self.overviewLabel.anchor(top: self.posterImageView.bottomAnchor,
                                   leading: self.view.leadingAnchor,
                                   trailing: self.view.trailingAnchor,
                                   padding: UIEdgeInsets(top: 32,

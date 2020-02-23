@@ -72,8 +72,6 @@ class MovieDetailViewController: UIViewController {
     lazy var overviewLabel: UILabel! = {
         let label = UILabel()
         
-        label.backgroundColor  = .tertiarySystemBackground
-        
         label.textColor                 = .label
         label.numberOfLines             = 0
         label.font                      = UIFont.helveticaNeueLight(size: 14)

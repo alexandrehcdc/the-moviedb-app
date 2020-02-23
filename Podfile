@@ -10,10 +10,12 @@ target 'the-moviedb-app' do
   target 'the-moviedb-appTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'OHHTTPStubs/Swift'
   end
 
   target 'the-moviedb-appUITests' do
     # Pods for testing
+    pod 'OHHTTPStubs/Swift'
   end
 
 end

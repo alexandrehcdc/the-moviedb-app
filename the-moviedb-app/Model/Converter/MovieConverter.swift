@@ -47,6 +47,7 @@ struct MovieConverter {
                                                              imageSize: posterSize),
                         page: entity.page,
                         totalPages: entity.totalPages,
+                        overview: entity.overview,
                         releaseDate: entity.releaseDate,
                         genres: genreList)
     }

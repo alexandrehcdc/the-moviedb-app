@@ -10,14 +10,6 @@ import UIKit
 
 class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
     
-    lazy var activityIndicator: UIActivityIndicatorView! = {
-        let indicator = UIActivityIndicatorView(style: .large)
-        
-        indicator.color = .gray
-        
-        return indicator
-    }()
-    
     lazy var posterImageView: UIImageView! = { [unowned self] in
         let imageView = UIImageView()
         
@@ -34,7 +26,7 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
         label.textColor                 = .label
         label.textAlignment             = .center
         label.numberOfLines             = 0
-        label.font                      = UIFont.helveticaNeueLight(size: 18)
+        label.font                      = UIFont.helveticaNeueLight(size: 20)
         label.adjustsFontSizeToFitWidth = true
         
         return label
@@ -46,10 +38,8 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
         label.textColor                 = .secondaryLabel
         label.textAlignment             = .center
         label.numberOfLines             = 0
-        label.font                      = UIFont.helveticaNeueLight(size: 12)
+        label.font                      = UIFont.helveticaNeueLight(size: 16)
         label.adjustsFontSizeToFitWidth = true
-        
-        label.text = "Horror, comedy, romance"
         
         return label
     }()
@@ -60,10 +50,8 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
         label.textColor                 = .secondaryLabel
         label.textAlignment             = .center
         label.numberOfLines             = 0
-        label.font                      = UIFont.helveticaNeueLight(size: 12)
+        label.font                      = UIFont.helveticaNeueLight(size: 16)
         label.adjustsFontSizeToFitWidth = true
-        
-        label.text = "20/02/2020"
         
         return label
     }()
@@ -75,7 +63,6 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
     }
     
     deinit {
-        self.activityIndicator = nil
         self.posterImageView   = nil
         self.descriptionLabel  = nil
         self.genreLabel        = nil
@@ -83,7 +70,10 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupLayout() {
-        self.addSubviews(posterImageView, descriptionLabel, genreLabel, releaseDateLabel)
+        self.addSubviews(posterImageView,
+                         descriptionLabel,
+                         genreLabel,
+                         releaseDateLabel)
         
         posterImageView.anchor(top: self.topAnchor,
                                leading: self.leadingAnchor,
@@ -97,32 +87,32 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
                                 leading: self.leadingAnchor,
                                 trailing: self.trailingAnchor,
                                 padding: UIEdgeInsets(top: 0,
-                                                      left: 0,
+                                                      left: 2,
                                                       bottom: 0,
-                                                      right: 0),
+                                                      right: 2),
                                 size: CGSize(width: self.frame.width,
-                                             height: 35))
+                                             height: 25))
         
         genreLabel.anchor(top: descriptionLabel.bottomAnchor,
                           leading: self.leadingAnchor,
                           trailing: self.trailingAnchor,
                           padding: UIEdgeInsets(top: 0,
-                                                left: 0,
+                                                left: 2,
                                                 bottom: 0,
-                                                right: 0),
+                                                right: 2),
                           size: CGSize(width: self.frame.width,
-                                       height: 15))
+                                       height: 20))
         
         releaseDateLabel.anchor(top: genreLabel.bottomAnchor,
                                 leading: self.leadingAnchor,
                                 bottom: self.bottomAnchor,
                                 trailing: self.trailingAnchor,
                                 padding: UIEdgeInsets(top: 0,
-                                                      left: 0,
+                                                      left: 2,
                                                       bottom: 0,
-                                                      right: 0),
+                                                      right: 2),
                                 size: CGSize(width: self.frame.width,
-                                             height: 10))
+                                             height: 15))
         
     }
     
@@ -132,7 +122,6 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
         self.genreLabel.text       = genres.joined(separator: ", ")
         
         self.posterImageView.showImageWith(path: posterImage,
-                                           activityIndicator: self.activityIndicator,
                                            defaultImage: .unavailable200x300)
     }
     

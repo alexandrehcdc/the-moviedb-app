@@ -59,12 +59,16 @@ extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let detailsViewController = MovieDetailViewController()
         
         if self.isSearchActive {
-            print(self.filteredMovies[indexPath.row])
+            detailsViewController.movie = self.filteredMovies[indexPath.row]
         } else {
-            print(self.movies[indexPath.row])
+            detailsViewController.movie = self.movies[indexPath.row]
         }
+        
+        self.navigationController?.present(detailsViewController, animated: true)
     }
 }
 
@@ -92,38 +96,4 @@ extension UpcomingMoviesViewController: UISearchBarDelegate {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3, execute: self.searchTaskManager)
     }
     
-}
-
-extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
-    func set(genres: [GenreEntity]) {
-        self.availableGenres = genres
-    }
-    
-    func getGenres() -> [GenreEntity] {
-        self.availableGenres
-    }
-    
-    func showLoader() {
-        DispatchQueue.main.async { self.view.showActivityLoader() }
-    }
-    
-    func hideLoader() {
-        DispatchQueue.main.async { self.view.hideActivityLoader() }
-    }
-    
-    func set(movies: [MovieDTO]) {
-        self.movies += movies
-    }
-    
-    func emptyMoviesResponse() {
-        
-    }
-    
-    func errorFetching() {
-        
-    }
-    
-    func showMovieDetails() {
-        
-    }
 }

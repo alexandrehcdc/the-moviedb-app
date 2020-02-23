@@ -10,13 +10,12 @@ import UIKit
 
 extension UIImageView {
     
-    func showImageWith(path url: URL?, activityIndicator: UIActivityIndicatorView, defaultImage: UIImage = UIImage()) {
-        activityIndicator.startAnimating()
+    func showImageWith(path url: URL?, defaultImage: UIImage = UIImage()) {
+
         DispatchQueue.global(qos: .background).async {
             let imageViewImage = self.getImageViewImage(url, defaultImage: defaultImage)
             
             DispatchQueue.main.sync {
-                activityIndicator.stopAnimating()
                 
                 UIView.transition(with: self,
                                   duration: 0.6, options: .transitionCrossDissolve,

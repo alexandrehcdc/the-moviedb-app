@@ -90,8 +90,6 @@ class UpcomingMoviesViewController: UICollectionViewController {
     
     @objc func searchBarDidPress(sender: UIBarButtonItem) {
         self.toggleNavigationBarItems()
-        
-        // MARK: TODO
     }
     
     @objc func moreOptionsDidPress(sender: UIBarButtonItem) {

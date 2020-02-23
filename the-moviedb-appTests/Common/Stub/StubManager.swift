@@ -11,20 +11,23 @@ import OHHTTPStubs
 
 struct StubManager {
     
-    private static let upcomingMoviesFilePath = "Files/UpcomingMovies.json"
-    private static let countriesFilePath      = "Files/Countries.json"
-    private static let posterImageFilePath    = "Files/Poster.jpg"
-    private static let genreFilePath          = "Files/Genres.json"
+    private static let upcomingMoviesFilePath = "UpcomingMovies"
+    private static let countriesFilePath      = "Countries"
+    private static let posterImageFilePath    = "Poster"
+    private static let genreFilePath          = "Genres"
+    private static let jsonType               = "json"
+    private static let jpgType                = "jpg"
     
     private static let defaultHealders = ["content-type": "application/json;charset=utf-8"]
     
-    static func setUp() {
+    static func setUp(bundle: Bundle) {
+    
         
         // MARK: Upcoming movies stub
         OHHTTPStubs.stubRequests(passingTest: { (urlRequest) -> Bool in
             urlRequest.url == URLBuilder.grantUpcomingMoviesURL(page: 1, region: "US")
         }) { (url) -> OHHTTPStubsResponse in
-            OHHTTPStubsResponse(fileAtPath: upcomingMoviesFilePath,
+            OHHTTPStubsResponse(fileAtPath: bundle.path(forResource: upcomingMoviesFilePath, ofType: jsonType) ?? "",
                                 statusCode: 200,
                                 headers: defaultHealders)
         }
@@ -33,7 +36,7 @@ struct StubManager {
         OHHTTPStubs.stubRequests(passingTest: { (urlRequest) -> Bool in
             urlRequest.url == URLBuilder.getCountriesURL()
         }) { (url) -> OHHTTPStubsResponse in
-            OHHTTPStubsResponse(fileAtPath: countriesFilePath,
+            OHHTTPStubsResponse(fileAtPath: bundle.path(forResource: countriesFilePath, ofType: jsonType) ?? "",
                                 statusCode: 200,
                                 headers: defaultHealders)
         }
@@ -42,7 +45,7 @@ struct StubManager {
         OHHTTPStubs.stubRequests(passingTest: { (urlRequest) -> Bool in
             urlRequest.url == URLBuilder.getPosterImage(path: "", imageSize: 200)
         }) { (url) -> OHHTTPStubsResponse in
-            OHHTTPStubsResponse(fileAtPath: posterImageFilePath,
+            OHHTTPStubsResponse(fileAtPath: bundle.path(forResource: posterImageFilePath, ofType: jpgType) ?? "",
                                 statusCode: 200,
                                 headers: defaultHealders)
         }
@@ -51,7 +54,7 @@ struct StubManager {
         OHHTTPStubs.stubRequests(passingTest: { (urlRequest) -> Bool in
             urlRequest.url == URLBuilder.getGenreURL()
         }) { (url) -> OHHTTPStubsResponse in
-            OHHTTPStubsResponse(fileAtPath: genreFilePath,
+            OHHTTPStubsResponse(fileAtPath: bundle.path(forResource: genreFilePath, ofType: jsonType) ?? "",
                                 statusCode: 200,
                                 headers: defaultHealders)
         }

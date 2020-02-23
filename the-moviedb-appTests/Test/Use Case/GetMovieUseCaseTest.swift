@@ -1,5 +1,5 @@
 //
-//  GetGenreUseCaseTest.swift
+//  GetMovieUseCaseTest.swift
 //  the-moviedb-appTests
 //
 //  Created by Alexandre Henrique on 2/23/20.
@@ -10,10 +10,10 @@ import XCTest
 import the_moviedb_app
 @testable import the_moviedb_app
 
-class GetGenreUseCaseTest: XCTestCase {
-
-    private var useCase: GetGenreUseCase!
-    private var comparebleResponse: GenreResponse!
+class GetMovieUseCaseTest: XCTestCase {
+    
+    private var useCase: GetMovieUseCase!
+    private var comparebleResponse: MovieResponse!
     private var action: ActionBlock!
     private var expectation: XCTestExpectation!
     
@@ -21,17 +21,17 @@ class GetGenreUseCaseTest: XCTestCase {
         super.setUp()
         
         let bundle       = Bundle(for: type(of: self))
-        self.useCase     = InjectionUseCase.provideGetGenreUseCase()
-        self.expectation = XCTestExpectation(description: "Fetch genres")
+        self.useCase     = InjectionUseCase.provideGetMovieUseCase()
+        self.expectation = XCTestExpectation(description: "Fetch Movies")
         
-        self.comparebleResponse = StubFileLoader.loadByFile(fileName: "Genres",
+        self.comparebleResponse = StubFileLoader.loadByFile(fileName: "UpcomingMovies",
                                                             fileExtension: "json",
                                                             bundle: bundle,
-                                                            castType: GenreResponse.self)
+                                                            castType: MovieResponse.self)
         
         StubManager.setUp(bundle: bundle)
     }
-
+    
     override func tearDown() {
         StubManager.removeStubs()
         
@@ -41,28 +41,30 @@ class GetGenreUseCaseTest: XCTestCase {
         self.expectation        = nil
     }
     
-    func testWhenFetchingMovieGenres() throws {
-        
+    func testWhenFetchingUpcomingMovie() throws {
+
         try given("An valid environment") {
             self.action = ActionBlock() {
-                self.useCase.fetchMovieGenres { (response) in
-                    response.onSuccess { (genreEntities) in
-                        XCTAssertEqual(genreEntities.first?.id, self.comparebleResponse.genres.first?.id)
-                        XCTAssertEqual(genreEntities.count, self.comparebleResponse.genres.count)
+                self.useCase.fetchUpcomingMovies(page: 1, region: "US") { (response) in
+                    response.onSuccess { (moviesEntities) in
+                        
+                        XCTAssertEqual(moviesEntities.first?.id, self.comparebleResponse.results.first?.id)
+                        XCTAssertEqual(moviesEntities.count, self.comparebleResponse.results.count)
                         self.expectation.fulfill()
                     }
                 }
             }
         }
-        
+
         try when("Executing the given block") {
             execute(action: self.action) { }
         }
-        
+
         try then("It should have matched the given genres") {
             wait(for: [self.expectation], timeout: 3.0)
         }
-        
-    }
 
+    }
+    
 }
+

@@ -31,13 +31,24 @@ struct MovieConverter {
         }
     }
     
-    static func fromEntityToDTO(_ entity: MovieEntity, posterSize: Int) -> MovieDTO {
-        MovieDTO(id: entity.id,
-                 title: entity.title,
-                 posterURL: URLBuilder.getPosterImage(path: entity.posterPath ?? "",
-                                                      imageSize: posterSize),
-                 page: entity.page,
-                 totalPages: entity.totalPages)
+    static func fromEntityToDTO(_ entity: MovieEntity, genres: [GenreEntity], posterSize: Int) -> MovieDTO {
+        
+        var genreList: [String] = []
+        
+        for id in entity.genreIds {
+            for genre in genres {
+                if id == genre.id { genreList.append(genre.name)}
+            }
+        }
+        
+        return MovieDTO(id: entity.id,
+                        title: entity.title,
+                        posterURL: URLBuilder.getPosterImage(path: entity.posterPath ?? entity.backdropPath ?? "",
+                                                             imageSize: posterSize),
+                        page: entity.page,
+                        totalPages: entity.totalPages,
+                        releaseDate: entity.releaseDate,
+                        genres: genreList)
     }
     
 }

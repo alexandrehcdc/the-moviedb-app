@@ -10,10 +10,10 @@ import UIKit
 
 extension UIImageView {
     
-    func showImageWith(path url: URL?, activityIndicator: UIActivityIndicatorView) {
+    func showImageWith(path url: URL?, activityIndicator: UIActivityIndicatorView, defaultImage: UIImage = UIImage()) {
         activityIndicator.startAnimating()
         DispatchQueue.global(qos: .background).async {
-            let imageViewImage = self.getImageViewImage(url)
+            let imageViewImage = self.getImageViewImage(url, defaultImage: defaultImage)
             
             DispatchQueue.main.sync {
                 activityIndicator.stopAnimating()
@@ -28,8 +28,7 @@ extension UIImageView {
         }
     }
     
-    private func getImageViewImage(_ url: URL?) -> UIImage {
-        let defaultImage = UIImage()
+    private func getImageViewImage(_ url: URL?, defaultImage: UIImage) -> UIImage {
         
         guard let url = url, let data = NSData(contentsOf: url) else { return  defaultImage }
 

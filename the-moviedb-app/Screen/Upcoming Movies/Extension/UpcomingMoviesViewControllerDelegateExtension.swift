@@ -19,10 +19,14 @@ extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
         
         if self.isSearchActive {
             cell.set(title: self.filteredMovies[indexPath.row].title,
-            posterImage: self.filteredMovies[indexPath.row].posterURL)
+                     posterImage: self.filteredMovies[indexPath.row].posterURL,
+                     releaseDate: self.filteredMovies[indexPath.row].releaseDate,
+                     genres: self.filteredMovies[indexPath.row].genres)
         } else {
             cell.set(title: self.movies[indexPath.row].title,
-                     posterImage: self.movies[indexPath.row].posterURL)
+                     posterImage: self.movies[indexPath.row].posterURL,
+                     releaseDate: self.movies[indexPath.row].releaseDate,
+                     genres: self.movies[indexPath.row].genres)
         }
         
         return cell
@@ -32,7 +36,7 @@ extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
         
         let cellWidth = (self.collectionView.frame.width / 2) - 16
         
-        return CGSize(width: cellWidth , height: cellWidth * 1.5)
+        return CGSize(width: cellWidth , height: cellWidth * 1.9)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -91,6 +95,14 @@ extension UpcomingMoviesViewController: UISearchBarDelegate {
 }
 
 extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
+    func set(genres: [GenreEntity]) {
+        self.availableGenres = genres
+    }
+    
+    func getGenres() -> [GenreEntity] {
+        self.availableGenres
+    }
+    
     func showLoader() {
         DispatchQueue.main.async { self.view.showActivityLoader() }
     }
@@ -107,7 +119,7 @@ extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
         
     }
     
-    func errorFetchingMovies() {
+    func errorFetching() {
         
     }
     

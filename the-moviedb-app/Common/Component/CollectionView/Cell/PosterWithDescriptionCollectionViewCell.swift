@@ -126,14 +126,14 @@ class PosterWithDescriptionCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func set(title: String, posterImage: URL?, releaseDate: String) {
+    func set(title: String, posterImage: URL?, releaseDate: String, genres: [String]) {
         self.descriptionLabel.text = title
-        
-//        self.posterImageView.addSubview(self.activityIndicator)
-//        self.activityIndicator.center = self.center
+        self.releaseDateLabel.text = releaseDate
+        self.genreLabel.text       = genres.joined(separator: ", ")
         
         self.posterImageView.showImageWith(path: posterImage,
-                                           activityIndicator: self.activityIndicator)
+                                           activityIndicator: self.activityIndicator,
+                                           defaultImage: .unavailable200x300)
     }
     
     required init?(coder: NSCoder) {

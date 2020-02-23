@@ -13,4 +13,9 @@ struct InjectionUseCase {
     public static func provideGetMovieUseCase() -> GetMovieUseCase {
         GetMovieUseCase()
     }
+    
+    public static func provideGetGenreUseCase() -> GetGenreUseCase {
+        GetGenreUseCase()
+    }
+    
 }

@@ -10,8 +10,9 @@ import UIKit
 
 class UpcomingMoviesViewController: UICollectionViewController {
     
-    var isSearchActive: Bool = false
-    var currentPage: Int     = 1
+    var isSearchActive: Bool           = false
+    var currentPage: Int               = 1
+    var availableGenres: [GenreEntity] = []
     
     var searchTaskManager: DispatchWorkItem!
     
@@ -84,7 +85,7 @@ class UpcomingMoviesViewController: UICollectionViewController {
 
         self.setLayout()
         
-        self.presenter.fetchMovies(page: self.currentPage)
+        self.presenter.fetchGenres()
     }
     
     @objc func searchBarDidPress(sender: UIBarButtonItem) {

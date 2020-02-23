@@ -10,11 +10,14 @@ import Foundation
 
 protocol UpcomingMoviesViewContract: BaseViewContract {
     func set(movies: [MovieDTO])
+    func set(genres: [GenreEntity])
+    func getGenres() -> [GenreEntity]
     func emptyMoviesResponse()
-    func errorFetchingMovies()
+    func errorFetching()
     func showMovieDetails()
 }
 
 protocol UpcomingMoviesPresenterContract {
+    func fetchGenres()
     func fetchMovies(page: Int)
 }

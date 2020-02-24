@@ -6,6 +6,15 @@ ___
 ![License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)
 ![Travis](https://img.shields.io/travis/alexandrehcdc/the-moviedb-app?style=flat-square)
 
+## Features and usage
+This application is made based on the **[The Movie DB](https://www.themoviedb.org/)** API, which shows the latest upcoming movies.
+**Features**:
+- Search by movie title;
+- Movie details;
+- Dark and Light mode;
+- Location pick (you can see upcoming movies from other regions around the world!);
+- Available in Portuguese-BR and English-US.
+
 ## Installation and requirements
 You will need **[CocoaPods](https://cocoapods.org/)** and **[Xcode](https://developer.apple.com/xcode/)** installed on your machine to retrieve and build the dependencies used on this project, with these simple steps:
 
@@ -33,3 +42,5 @@ The project is mainly inspired by MVP.
 
 ## Tools and libraries used
 * **[OHHTTPStubs](https://github.com/AliSoftware/OHHTTPStubs)**: Stubs provider for network behavior manipulation through tests
+* **[Travis-CI](https://travis-ci.org/)**: Continuous Integration service.
+* **[Fakery](https://github.com/vadymmarkov/Fakery)**: A library for generating fake data on tests.

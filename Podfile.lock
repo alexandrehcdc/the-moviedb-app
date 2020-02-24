@@ -1,4 +1,5 @@
 PODS:
+  - Fakery (4.1.1)
   - OHHTTPStubs/Core (8.0.0)
   - OHHTTPStubs/Default (8.0.0):
     - OHHTTPStubs/Core
@@ -14,15 +15,18 @@ PODS:
     - OHHTTPStubs/Default
 
 DEPENDENCIES:
+  - Fakery
   - OHHTTPStubs/Swift
 
 SPEC REPOS:
   trunk:
+    - Fakery
     - OHHTTPStubs
 
 SPEC CHECKSUMS:
+  Fakery: d3380c4aa1efe7631c0831d7e26aa9db4491f014
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
 
-PODFILE CHECKSUM: 64c33d678a6d02dc860b38102e3ddfb099badcc0
+PODFILE CHECKSUM: 0e384dcb4844b409e5b801ab1e8a8531eef3f7a0
 
 COCOAPODS: 1.8.3

@@ -43,8 +43,9 @@ extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
     }
     
     func invalidateCurrentMovieSet() {
-        self.currentPage   = 1
-        self.movies        = []
+        self.currentPage    = 1
+        self.movies         = []
+        self.filteredMovies = []
         
         self.presenter.fetchMovies(page: self.currentPage)
     }

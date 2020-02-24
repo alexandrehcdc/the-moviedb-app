@@ -5,6 +5,7 @@ before_install:
   - gem install cocoapods -v '1.8.3'
   - cd the-moviedb-app
   - pod install
+  - ls
 
 script:
-  - xcodebuild -workspace the-moviedb-app.xcworkspace -scheme the-moviedb-appTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone XR,OS=13.2' test ONLY_ACTIVE_ARCH=NO
+  - xcodebuild -workspace the-moviedb-app.xcworkspace -scheme the-moviedb-appTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=13.3' test ONLY_ACTIVE_ARCH=NO

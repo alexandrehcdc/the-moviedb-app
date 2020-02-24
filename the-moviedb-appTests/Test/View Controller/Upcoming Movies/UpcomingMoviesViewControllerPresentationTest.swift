@@ -1,5 +1,5 @@
 //
-//  UpcomingMoviesTest.swift
+//  UpcomingMoviesViewControllerPresentationTest.swift
 //  the-moviedb-appTests
 //
 //  Created by Alexandre Henrique on 2/23/20.
@@ -10,7 +10,7 @@ import XCTest
 import the_moviedb_app
 @testable import the_moviedb_app
 
-class UpcomingMoviesTest: XCTestCase {
+class UpcomingMoviesViewControllerPresentationTest: XCTestCase {
     
     private var viewController: UpcomingMoviesViewController!
     private var presenter: UpcomingMoviesPresenterMock!

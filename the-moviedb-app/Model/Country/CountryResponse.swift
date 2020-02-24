@@ -10,5 +10,10 @@ import Foundation
 
 struct CountryResponse: Codable {
     let iso_3166_1: String
-    let english_name: String
+    let englishName: String
+    
+    private enum CodingKeys : String, CodingKey {
+        case iso_3166_1, englishName = "english_name"
+    }
+    
 }

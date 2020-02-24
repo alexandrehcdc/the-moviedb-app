@@ -12,25 +12,51 @@ struct MovieResponse: Codable {
     let results: [MovieResponseBody]
     let dates: MovieDatesResponse?
     let page: Int
-    let total_pages: Int
-    let total_results: Int
+    let totalPages: Int
+    let totalResults: Int
+    
+    private enum CodingKeys : String, CodingKey {
+        case results,
+             dates,
+             page,
+             totalPages = "total_pages",
+             totalResults = "total_results"
+    }
+    
 }
 
 struct MovieResponseBody: Codable {
     let popularity: Float
-    let vote_count: Int
+    let voteCount: Int
     let video: Bool
-    let poster_path: String?
+    let posterPath: String?
     let id: Int
     let adult: Bool
-    let backdrop_path: String?
-    let original_language: String
-    let original_title: String
-    let genre_ids: [Int]
+    let backdropPath: String?
+    let originalLanguage: String
+    let originalTitle: String
+    let genreIds: [Int]
     let title: String
-    let vote_average: Float
+    let voteAverage: Float
     let overview: String
-    let release_date: String
+    let releaseDate: String
+    
+    private enum CodingKeys : String, CodingKey {
+        case popularity,
+             voteCount = "vote_count",
+             video,
+             posterPath = "poster_path",
+             id,
+             adult,
+             backdropPath = "backdrop_path",
+             originalLanguage = "original_language",
+             originalTitle = "original_title",
+             genreIds = "genre_ids",
+             title,
+             voteAverage = "vote_average",
+             overview,
+             releaseDate = "release_date"
+    }
 }
 
 struct MovieDatesResponse: Codable {

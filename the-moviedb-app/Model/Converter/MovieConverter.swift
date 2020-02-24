@@ -13,21 +13,21 @@ struct MovieConverter {
     static func fromResponseToEntities(_ response: MovieResponse) -> [MovieEntity] {
         response.results.map { object -> MovieEntity in
             MovieEntity(popularity: object.popularity,
-                        voteCount: object.vote_count,
+                        voteCount: object.voteCount,
                         video: object.video,
-                        posterPath: object.poster_path,
+                        posterPath: object.posterPath,
                         id: object.id,
                         adult: object.adult,
-                        backdropPath: object.backdrop_path,
-                        originalLanguage: object.original_language,
-                        originalTitle: object.original_title,
-                        genreIds: object.genre_ids,
+                        backdropPath: object.backdropPath,
+                        originalLanguage: object.originalLanguage,
+                        originalTitle: object.originalTitle,
+                        genreIds: object.genreIds,
                         title: object.title,
-                        voteAverage: object.vote_average,
+                        voteAverage: object.voteAverage,
                         overview: object.overview,
-                        releaseDate: object.release_date,
+                        releaseDate: object.releaseDate,
                         page: response.page,
-                        totalPages: response.total_pages)
+                        totalPages: response.totalPages)
         }
     }
     

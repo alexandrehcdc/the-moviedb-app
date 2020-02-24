@@ -12,7 +12,7 @@ struct ConfigurationConverter {
     
     static func fromResponseToEntity(_ response: CountryResponse) -> CountryEntity {
         CountryEntity(isoCode: response.iso_3166_1,
-                      englishName: response.english_name)
+                      englishName: response.englishName)
     }
     
 }

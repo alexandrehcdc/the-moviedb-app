@@ -20,7 +20,7 @@ class GetMovieUseCaseTest: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        let bundle       = Bundle(for: type(of: self))
+        let bundle       = Bundle.main
         self.useCase     = InjectionUseCase.provideGetMovieUseCase()
         self.expectation = XCTestExpectation(description: "Fetch Movies")
         
@@ -29,7 +29,7 @@ class GetMovieUseCaseTest: XCTestCase {
                                                             bundle: bundle,
                                                             castType: MovieResponse.self)
         
-        StubManager.setUp(bundle: bundle)
+        StubManager.setUp()
     }
     
     override func tearDown() {

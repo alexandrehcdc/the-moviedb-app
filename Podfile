@@ -6,18 +6,16 @@ target 'the-moviedb-app' do
   use_frameworks!
 
   # Pods for the-moviedb-app
+  pod 'OHHTTPStubs/Swift'
 
   target 'the-moviedb-appTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'OHHTTPStubs/Swift'
     pod 'Fakery'
   end
 
   target 'the-moviedb-appUITests' do
     # Pods for testing
-    pod 'OHHTTPStubs/Swift'
-    pod 'Fakery'
   end
 
 end

@@ -20,7 +20,7 @@ class GetConfigurationUseCaseTest: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        let bundle       = Bundle(for: type(of: self))
+        let bundle       = Bundle.main
         self.useCase     = InjectionUseCase.provideGetConfigurationUseCase()
         self.expectation = XCTestExpectation(description: "Fetch countries")
         
@@ -29,7 +29,7 @@ class GetConfigurationUseCaseTest: XCTestCase {
                                                             bundle: bundle,
                                                             castType: [CountryResponse].self)
         
-        StubManager.setUp(bundle: bundle)
+        StubManager.setUp()
     }
 
     override func tearDown() {

@@ -20,7 +20,7 @@ class GetGenreUseCaseTest: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        let bundle       = Bundle(for: type(of: self))
+        let bundle       = Bundle.main
         self.useCase     = InjectionUseCase.provideGetGenreUseCase()
         self.expectation = XCTestExpectation(description: "Fetch genres")
         
@@ -29,7 +29,7 @@ class GetGenreUseCaseTest: XCTestCase {
                                                             bundle: bundle,
                                                             castType: GenreResponse.self)
         
-        StubManager.setUp(bundle: bundle)
+        StubManager.setUp()
     }
 
     override func tearDown() {

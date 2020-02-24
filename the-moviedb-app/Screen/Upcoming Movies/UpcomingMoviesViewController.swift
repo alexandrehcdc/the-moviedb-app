@@ -56,7 +56,7 @@ class UpcomingMoviesViewController: UICollectionViewController {
         
         label.font      = UIFont.helveticaNeue(size: 20)
         label.textColor = .label
-        label.text      = AppStrings.upcoming_movies.capitalized
+        label.text      = AppStrings.upcomingMovies.capitalized
         
         return label
     }()
@@ -121,11 +121,11 @@ class UpcomingMoviesViewController: UICollectionViewController {
     }
     
     @objc func locationButtonDidPress(sender: UIButton) {
-        self.composedAlert(title: AppStrings.pick_region.firstCapitalized(),
-                           message: AppStrings.pick_region_title.firstCapitalized(),
+        self.composedAlert(title: AppStrings.pickRegion.firstCapitalized(),
+                           message: AppStrings.pickRegionTitle.firstCapitalized(),
                            handlersTitles: [AppStrings.brazil.capitalized,
-                                            AppStrings.united_states.capitalized,
-                                            AppStrings.other_region.capitalized,
+                                            AppStrings.unitedStates.capitalized,
+                                            AppStrings.otherRegion.capitalized,
                                             AppStrings.cancel.capitalized],
                            handlers: [(brazilRegionPicked, .default),
                                       (americaRegionPicked, .default),

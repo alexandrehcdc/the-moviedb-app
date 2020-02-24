@@ -33,11 +33,13 @@ extension UpcomingMoviesViewController: UpcomingMoviesViewContract {
     func set(movies: [MovieDTO]) { self.movies += movies }
     
     func emptyResponse() {
-        
+        self.alert(title: AppStrings.emptyResponse.capitalized,
+                   message: AppStrings.emptyResponseMessage.capitalized)
     }
     
     func errorFetching() {
-        
+        self.alert(title: AppStrings.error.capitalized,
+                   message: AppStrings.errorResponseMessage)
     }
     
     func invalidateCurrentMovieSet() {

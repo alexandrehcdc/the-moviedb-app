@@ -11,15 +11,21 @@
 "app_name"         = "The MovieDB App";
 
 // MARK: General strings
-"idiom"         = "pt-BR";
-"cancel"        = "cancelar";
-"brazil"        = "brasil";
-"united_states" = "estados unidos da américa";
+"idiom"          = "pt-BR";
+"cancel"         = "cancelar";
+"error"          = "erro";
+"empty_response" = "resposta vazia";
+"brazil"         = "brasil";
+"united_states"  = "estados unidos da américa";
 
 // MARK: Configuration related strings
 "pick_region"       = "selecione uma região";
 "pick_region_title" = "escolha uma região para ver os próximos filmes em cartaz";
 "other_region"      = "outras regiões";
+
+//MARK: Request related string
+"empty_response_message" = "O servidor respondeu sem dados. Por favor, tente novamente mais tarde.";
+"error_response_message" = "Algum erro aconteceu enquanto executávamos sua requisição. Por favor, tente novamente mais tarde.";
 
 // MARK: Movie related strings
 "upcoming_movies" = "próximos filmes";

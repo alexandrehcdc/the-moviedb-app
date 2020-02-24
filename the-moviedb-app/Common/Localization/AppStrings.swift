@@ -11,24 +11,30 @@ import Foundation
 struct AppStrings {
 
     // MARK: App description strings
-    public static let app_version_number = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
-    public static let app_version_name = localized("app_version_name")
-    public static let app_version      = "\(app_version_name) \(String(describing: app_version_number))"
-    public static let app_name         = localized("app_name")
+    public static let appVersionNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+    public static let appVersionName   = localized("app_version_name")
+    public static let appVersion       = "\(appVersionName) \(String(describing: appVersionNumber))"
+    public static let appName          = localized("app_name")
     
     // MARK: General strings
     public static let idiom         = localized("idiom")
     public static let cancel        = localized("cancel")
+    public static let error         = localized("error")
+    public static let emptyResponse = localized("empty_response")
     public static let brazil        = localized("brazil")
-    public static let united_states = localized("united_states")
+    public static let unitedStates  = localized("united_states")
+    
+    //MARK: Request related string
+    public static let emptyResponseMessage = localized("empty_response_message")
+    public static let errorResponseMessage = localized("error_response_message")
     
     // MARK: Configuration related strings
-    public static let pick_region       = localized("pick_region")
-    public static let pick_region_title = localized("pick_region_title")
-    public static let other_region      = localized("other_region")
+    public static let pickRegion      = localized("pick_region")
+    public static let pickRegionTitle = localized("pick_region_title")
+    public static let otherRegion     = localized("other_region")
     
     // MARK: Movie related strings
-    public static let upcoming_movies = localized("upcoming_movies")
+    public static let upcomingMovies = localized("upcoming_movies")
     
     // MARK: Localization function
     public static func localized(_ value: String) -> String {

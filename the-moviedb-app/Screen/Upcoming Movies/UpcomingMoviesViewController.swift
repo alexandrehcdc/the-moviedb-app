@@ -122,24 +122,24 @@ class UpcomingMoviesViewController: UICollectionViewController {
     
     @objc func locationButtonDidPress(sender: UIButton) {
         self.composedAlert(title: AppStrings.pick_region.firstCapitalized(),
-        message: AppStrings.pick_region_title.firstCapitalized(),
-        handlersTitles: [AppStrings.brazil.capitalized,
-                         AppStrings.united_states.capitalized,
-                         AppStrings.other_region.capitalized,
-                         AppStrings.cancel.capitalized],
-        handlers: [(brazilRegionPicked, .default),
-                   (americaRegionPicked, .default),
-                   (otherRegionPicked, .default),
-                   (cancelRegionPick, .destructive)])
+                           message: AppStrings.pick_region_title.firstCapitalized(),
+                           handlersTitles: [AppStrings.brazil.capitalized,
+                                            AppStrings.united_states.capitalized,
+                                            AppStrings.other_region.capitalized,
+                                            AppStrings.cancel.capitalized],
+                           handlers: [(brazilRegionPicked, .default),
+                                      (americaRegionPicked, .default),
+                                      (otherRegionPicked, .default),
+                                      (cancelRegionPick, .destructive)])
     }
     
-    private func brazilRegionPicked(action: UIAlertAction) {
+    func brazilRegionPicked(action: UIAlertAction) {
         self.pickedCountry = "BR"
     }
-    private func americaRegionPicked(action: UIAlertAction) {
+    func americaRegionPicked(action: UIAlertAction) {
         self.pickedCountry = "US"
     }
-    private func otherRegionPicked(action: UIAlertAction) {
+    func otherRegionPicked(action: UIAlertAction) {
         if self.countryList.isEmpty {
             self.presenter.fetchCoutries()
             return
@@ -148,6 +148,6 @@ class UpcomingMoviesViewController: UICollectionViewController {
         self.layPickerView()
     }
     
-    private func cancelRegionPick(action: UIAlertAction) { }
+    func cancelRegionPick(action: UIAlertAction) { }
     
 }

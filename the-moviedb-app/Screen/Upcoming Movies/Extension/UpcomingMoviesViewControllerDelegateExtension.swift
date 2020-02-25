@@ -10,7 +10,22 @@ import UIKit
 
 extension UpcomingMoviesViewController: UICollectionViewDelegateFlowLayout {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.isSearchActive ? self.filteredMovies.count :self.movies.count
+
+        self.resetCollectionViewEmptyResults()
+        
+        if self.isSearchActive {
+            if self.filteredMovies.isEmpty {
+                self.setCollectionViewEmptyResults()
+            }
+            
+            return self.filteredMovies.count
+        }
+        
+        if self.movies.isEmpty {
+            self.setCollectionViewEmptyResults()
+        }
+        
+        return self.movies.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

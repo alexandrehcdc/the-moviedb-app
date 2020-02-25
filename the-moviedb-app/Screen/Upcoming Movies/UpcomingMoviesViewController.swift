@@ -16,6 +16,7 @@ class UpcomingMoviesViewController: UICollectionViewController {
     var countryList: [CountryEntity]   = []
     
     var searchTaskManager: DispatchWorkItem!
+    var viewTaskManager: DispatchWorkItem!
     
     var pickedCountry: String = Locale.current.regionCode ?? "US" {
         didSet {
@@ -108,6 +109,7 @@ class UpcomingMoviesViewController: UICollectionViewController {
         self.searchBar            = nil
         self.locationButton       = nil
         self.searchTaskManager    = nil
+        self.viewTaskManager      = nil
     }
     
     override func viewDidLoad() {

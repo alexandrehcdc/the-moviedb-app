@@ -86,8 +86,10 @@ class UpcomingMoviesViewController: UICollectionViewController {
         let image  = UIImage.marker.withRenderingMode(.alwaysTemplate)
         
         button.setImage(image, for: .normal)
-        button.imageView?.tintColor = .label
-        button.backgroundColor = .tertiarySystemBackground
+        
+        button.imageView?.tintColor    = .label
+        button.backgroundColor         = .tertiarySystemBackground
+        button.accessibilityIdentifier = "locationButton"
         
         button.imageEdgeInsets = UIEdgeInsets(top: 12,
                                               left: 17,

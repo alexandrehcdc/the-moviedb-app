@@ -43,8 +43,6 @@ class UpcomingMoviesViewControllerTest: XCTestCase {
         
         try when("Set to the view controller") {
             self.viewController.movies = self.movies
-            
-            self.viewController.viewDidLoad()
         }
         
         try then("Check if collection view have the correct attributes") {
@@ -65,8 +63,6 @@ class UpcomingMoviesViewControllerTest: XCTestCase {
         try when("Set to the view controller") {
             self.viewController.movies         = self.movies
             self.viewController.filteredMovies = self.filteredMovies
-            
-            self.viewController.viewDidLoad()
         }
         
         try then("Check if collection view have the correct attributes") {
@@ -84,8 +80,6 @@ class UpcomingMoviesViewControllerTest: XCTestCase {
         
         try when("Set to the view controller") {
             self.viewController.pickedCountry = "PL"
-            
-            self.viewController.viewDidLoad()
         }
         
         try then("Check if collection view have the correct attributes") {

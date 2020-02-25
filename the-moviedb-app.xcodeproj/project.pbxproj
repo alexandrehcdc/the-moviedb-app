@@ -68,6 +68,8 @@
 		45EEFF0A240470DD0053E647 /* Genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 457A74482402ECC500CD5DFC /* Genres.json */; };
 		45EEFF0B240470DD0053E647 /* StubFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B0F0B24031985002ABF76 /* StubFileLoader.swift */; };
 		45EEFF0C240470DD0053E647 /* StubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9803C2402E65500AEB504 /* StubManager.swift */; };
+		45EEFF0E2404A1270053E647 /* UpcomingMoviesBR.json in Resources */ = {isa = PBXBuildFile; fileRef = 45EEFF0D2404A1270053E647 /* UpcomingMoviesBR.json */; };
+		45EEFF0F2404A46F0053E647 /* XCTestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C980332402DC9E00AEB504 /* XCTestExtension.swift */; };
 		958308A4184BA5233F217B7A /* Pods_the_moviedb_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A9D31CD4510C4845B11082 /* Pods_the_moviedb_appTests.framework */; };
 		C2FBB4E8BFA5A4AE1D550954 /* Pods_the_moviedb_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA14F224EE58EF263CB4B36 /* Pods_the_moviedb_app.framework */; };
 		EF7B9206663CF33B562C3B64 /* Pods_the_moviedb_app_the_moviedb_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C82FCA732674F0FC5A926F /* Pods_the_moviedb_app_the_moviedb_appUITests.framework */; };
@@ -165,6 +167,7 @@
 		45C9803A2402DD0800AEB504 /* GetConfigurationUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConfigurationUseCaseTest.swift; sourceTree = "<group>"; };
 		45C9803C2402E65500AEB504 /* StubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubManager.swift; sourceTree = "<group>"; };
 		45EEFEFC240464D90053E647 /* UpcomingMoviesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesTest.swift; sourceTree = "<group>"; };
+		45EEFF0D2404A1270053E647 /* UpcomingMoviesBR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UpcomingMoviesBR.json; sourceTree = "<group>"; };
 		5AA14F224EE58EF263CB4B36 /* Pods_the_moviedb_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_moviedb_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FAA2303DA544ADD8C8EC4C1 /* Pods-the-moviedb-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the-moviedb-appTests.debug.xcconfig"; path = "Target Support Files/Pods-the-moviedb-appTests/Pods-the-moviedb-appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70AEBF40D81DBF9424242FCB /* Pods-the-moviedb-app-the-moviedb-appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the-moviedb-app-the-moviedb-appUITests.debug.xcconfig"; path = "Target Support Files/Pods-the-moviedb-app-the-moviedb-appUITests/Pods-the-moviedb-app-the-moviedb-appUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +222,7 @@
 		457A74432402EB7700CD5DFC /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				45EEFF0D2404A1270053E647 /* UpcomingMoviesBR.json */,
 				457A74442402EC5200CD5DFC /* UpcomingMovies.json */,
 				457A744A2402EE0C00CD5DFC /* Poster.jpg */,
 				457A74462402ECA800CD5DFC /* Countries.json */,
@@ -535,7 +539,6 @@
 		45B7CD8123FF23FC0014821B /* the-moviedb-appUITests */ = {
 			isa = PBXGroup;
 			children = (
-				45EEFEFE240465590053E647 /* Common */,
 				45EEFEF9240464970053E647 /* Test */,
 				45B7CD8223FF23FC0014821B /* the_moviedb_appUITests.swift */,
 				45B7CD8423FF23FC0014821B /* Info.plist */,
@@ -577,21 +580,6 @@
 				45EEFEFC240464D90053E647 /* UpcomingMoviesTest.swift */,
 			);
 			path = Test;
-			sourceTree = "<group>";
-		};
-		45EEFEFE240465590053E647 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				45EEFEFF240466FC0053E647 /* Screen mapping */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		45EEFEFF240466FC0053E647 /* Screen mapping */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Screen mapping";
 			sourceTree = "<group>";
 		};
 		45EEFF06240470AE0053E647 /* Tests */ = {
@@ -742,6 +730,7 @@
 				45B7CD6A23FF23FC0014821B /* Assets.xcassets in Resources */,
 				45EEFF09240470DD0053E647 /* Countries.json in Resources */,
 				45EEFF08240470DD0053E647 /* Poster.jpg in Resources */,
+				45EEFF0E2404A1270053E647 /* UpcomingMoviesBR.json in Resources */,
 				45EEFF0A240470DD0053E647 /* Genres.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -954,6 +943,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45EEFEFD240464D90053E647 /* UpcomingMoviesTest.swift in Sources */,
+				45EEFF0F2404A46F0053E647 /* XCTestExtension.swift in Sources */,
 				45B7CD8323FF23FC0014821B /* the_moviedb_appUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

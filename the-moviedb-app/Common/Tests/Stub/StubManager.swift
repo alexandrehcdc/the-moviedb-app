@@ -34,7 +34,7 @@ class StubManager {
         OHHTTPStubs.stubRequests(passingTest: { (urlRequest) -> Bool in
             urlRequest.url == URLBuilder.grantUpcomingMoviesURL(page: 1, region: "BR")
         }) { (url) -> OHHTTPStubsResponse in
-            OHHTTPStubsResponse(fileAtPath: OHPathForFile("\(upcomingMoviesFilePath).\(jsonType)", self)!,
+            OHHTTPStubsResponse(fileAtPath: OHPathForFile("\(upcomingMoviesFilePath)BR.\(jsonType)", self)!,
                                 statusCode: 200,
                                 headers: defaultHealders)
         }

@@ -1,0 +1,158 @@
+{
+  "results": [
+    {
+      "popularity": 40.78,
+      "vote_count": 12,
+      "video": false,
+      "poster_path": "/tIpGQ9uuII7QVFF0GHCFTJFfXve.jpg",
+      "id": 555974,
+      "adult": false,
+      "backdrop_path": "/tE7SjDwITs333u4fBICqEmCRfgk.jpg",
+      "original_language": "en",
+      "original_title": "Brahms: The Boy II",
+      "genre_ids": [
+        27,
+        9648,
+        53
+      ],
+      "title": "Brahms: The Boy II",
+      "vote_average": 6.7,
+      "overview": "After a family moves into the Heelshire Mansion, their young son soon makes friends with a life-like doll called Brahms.",
+      "release_date": "2020-03-05"
+    },
+    {
+      "popularity": 33.891,
+      "vote_count": 2,
+      "video": false,
+      "poster_path": "/4U7hpTK0XTQBKT5X60bKmJd05ha.jpg",
+      "id": 570670,
+      "adult": false,
+      "backdrop_path": "/uZMZyvarQuXLRqf3xdpdMqzdtjb.jpg",
+      "original_language": "en",
+      "original_title": "The Invisible Man",
+      "genre_ids": [
+        27,
+        878,
+        53
+      ],
+      "title": "The Invisible Man",
+      "vote_average": 8,
+      "overview": "When Cecilia's abusive ex takes his own life and leaves her his fortune, she suspects his death was a hoax. As a series of coincidences turn lethal, Cecilia works to prove that she is being hunted by someone nobody can see.",
+      "release_date": "2020-02-27"
+    },
+    {
+      "popularity": 13.617,
+      "vote_count": 0,
+      "video": false,
+      "poster_path": "/4q2hz2m8hubgvijz8Ez0T2Os2Yv.jpg",
+      "id": 520763,
+      "adult": false,
+      "backdrop_path": "/nSEVIxMoGiZNcqGG8bohYhfmAlM.jpg",
+      "original_language": "en",
+      "original_title": "A Quiet Place Part II",
+      "genre_ids": [
+        18,
+        878,
+        53
+      ],
+      "title": "A Quiet Place Part II",
+      "vote_average": 0,
+      "overview": "Following the events at home, the Abbott family now face the terrors of the outside world. Forced to venture into the unknown, they realize that the creatures that hunt by sound are not the only threats that lurk beyond the sand path.",
+      "release_date": "2020-03-19"
+    },
+    {
+      "popularity": 4.39,
+      "id": 643043,
+      "video": false,
+      "vote_count": 0,
+      "vote_average": 0,
+      "title": "Around Copacabana",
+      "release_date": "2020-03-01",
+      "original_language": "pt",
+      "original_title": "Copacabana Madureira",
+      "genre_ids": [
+        99
+      ],
+      "backdrop_path": "/tnzm1oQtiY9AsFVCAD5OjrK5ESd.jpg",
+      "adult": false,
+      "overview": "Presidential elections. Fake news. Pleasures and pains through the neighborhoods of the city. Brazil, 21st century.",
+      "poster_path": "/telLtvzrzpjwCXxHZyJ6nkezCPa.jpg"
+    },
+    {
+      "popularity": 3.249,
+      "vote_count": 36,
+      "video": false,
+      "poster_path": "/41YWD0M32uo6ekBEvVrQgidyemB.jpg",
+      "id": 478860,
+      "adult": false,
+      "backdrop_path": "/e8Cqw8U7vCcMrH1dHYZT9O01Jiy.jpg",
+      "original_language": "fr",
+      "original_title": "Proxima",
+      "genre_ids": [
+        28,
+        18
+      ],
+      "title": "Proxima",
+      "vote_average": 7,
+      "overview": "Sarah is a French astronaut training at the European Space Agency in Cologne. She is the only woman in the arduous program. She lives alone with Stella, her seven year old daughter. Sarah feels guilty that she cannot spend more time with her child. Her love is overpowering, unsettling. When Sarah is chosen to join the crew of a year-long space mission called Proxima, it creates chaos in the mother-daughter relationship.",
+      "release_date": "2020-03-19"
+    },
+    {
+      "popularity": 2.971,
+      "vote_count": 0,
+      "video": false,
+      "poster_path": "/rCmq4393MdraeDOkv0rbWx7WBzD.jpg",
+      "id": 615228,
+      "adult": false,
+      "backdrop_path": null,
+      "original_language": "pt",
+      "original_title": "Vou Nadar Até Você",
+      "genre_ids": [],
+      "title": "Vou Nadar Até Você",
+      "vote_average": 0,
+      "overview": "",
+      "release_date": "2020-03-05"
+    },
+    {
+      "popularity": 1.441,
+      "vote_count": 0,
+      "video": false,
+      "poster_path": "/ydvigEhT3knSzQjVudQUQFN2JE0.jpg",
+      "id": 658030,
+      "adult": false,
+      "backdrop_path": null,
+      "original_language": "pt",
+      "original_title": "1300 Shots",
+      "genre_ids": [],
+      "title": "1300 Shots",
+      "vote_average": 0,
+      "overview": "",
+      "release_date": "2020-03-13"
+    },
+    {
+      "popularity": 1.376,
+      "vote_count": 0,
+      "video": false,
+      "poster_path": "/zxKVZAe5x6vtew8mZR6Wb06bZjm.jpg",
+      "id": 675418,
+      "adult": false,
+      "backdrop_path": null,
+      "original_language": "pt",
+      "original_title": "Solteira Quase Surtando",
+      "genre_ids": [
+        35
+      ],
+      "title": "Solteira Quase Surtando",
+      "vote_average": 0,
+      "overview": "",
+      "release_date": "2020-03-12"
+    }
+  ],
+  "page": 1,
+  "total_results": 8,
+  "dates": {
+    "maximum": "2020-03-20",
+    "minimum": "2020-02-24"
+  },
+  "total_pages": 1
+}

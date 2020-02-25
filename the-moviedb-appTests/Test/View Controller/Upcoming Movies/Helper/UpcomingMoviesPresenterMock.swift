@@ -6,8 +6,8 @@
 //  Copyright © 2020 Alexandre Henrique. All rights reserved.
 //
 
-import the_moviedb_app
-@testable import the_moviedb_app
+import The_MovieDB_App
+@testable import The_MovieDB_App
 
 class UpcomingMoviesPresenterMock: UpcomingMoviesPresenterContract {
     

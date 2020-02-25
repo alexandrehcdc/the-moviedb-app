@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import the_moviedb_app
+@testable import The_MovieDB_App
 
 class UpcomingMoviesTest: XCTestCase {
 

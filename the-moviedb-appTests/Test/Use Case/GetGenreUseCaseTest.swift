@@ -7,8 +7,8 @@
 //
 
 import XCTest
-import the_moviedb_app
-@testable import the_moviedb_app
+import The_MovieDB_App
+@testable import The_MovieDB_App
 
 class GetGenreUseCaseTest: XCTestCase {
 

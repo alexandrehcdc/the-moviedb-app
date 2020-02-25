@@ -1,5 +1,5 @@
 //
-//  MovieDetailLayoutViewController.swift
+//  MovieDetailLayoutViewControllerLayoutExtension.swift
 //  the-moviedb-app
 //
 //  Created by Alexandre Henrique on 2/22/20.
@@ -19,7 +19,8 @@ extension MovieDetailViewController {
                               titleLabel,
                               genreLabel,
                               releaseDateLabel,
-                              overviewLabel)
+                              overviewLabel,
+                              posterExpansionButton)
         
         let backgroundPosterHeight = self.view.frame.height * 0.3
         
@@ -74,6 +75,22 @@ extension MovieDetailViewController {
                                                         left: 16,
                                                         bottom: 0,
                                                         right: 16))
+        
+        self.posterExpansionButton.anchor(bottom: self.posterImageView.bottomAnchor,
+                                          trailing: self.posterImageView.trailingAnchor,
+                                          padding: UIEdgeInsets(top: 0,
+                                                                left: 0,
+                                                                bottom: 4,
+                                                                right: 4),
+                                          size: CGSize(width: 20, height: 20))
+    }
+    
+    func showPosterModal(image: UIImage) {
+        let popUpViewController = ExpandedMoviePopupViewController()
+        
+        popUpViewController.image = image
+        
+        self.present(popUpViewController, animated: true)
     }
     
 }

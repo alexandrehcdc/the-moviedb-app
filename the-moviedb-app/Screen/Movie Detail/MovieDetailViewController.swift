@@ -91,10 +91,31 @@ class MovieDetailViewController: UIViewController {
         return label
     }()
     
+    lazy var posterExpansionButton: UIButton! = {
+        let button = UIButton()
+        let image  = UIImage.expand.withRenderingMode(.alwaysTemplate)
+        
+        button.setImage(image, for: .normal)
+        
+        button.imageView?.tintColor = .label
+        button.imageEdgeInsets      = UIEdgeInsets(top: 2,
+                                                   left: 2,
+                                                   bottom: 2,
+                                                   right: 2)
+        
+        button.addTarget(self, action: #selector(expandButtonDidPress), for: .touchUpInside)
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setLayout()
+    }
+    
+    @objc func expandButtonDidPress(sender: UIButton) {
+        self.showPosterModal(image: self.posterImageView.image ?? .unavailable200x300)
     }
     
 }

@@ -25,7 +25,7 @@
 		45A42D32240205370078CF75 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D31240205370078CF75 /* UIImageExtension.swift */; };
 		45A42D35240216BD0078CF75 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D34240216BD0078CF75 /* MovieDetailViewController.swift */; };
 		45A42D37240217CF0078CF75 /* UpcomingMoviesViewControllerMethodsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D36240217CF0078CF75 /* UpcomingMoviesViewControllerMethodsExtension.swift */; };
-		45A42D3A24021B020078CF75 /* MovieDetailLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D3924021B020078CF75 /* MovieDetailLayoutViewController.swift */; };
+		45A42D3A24021B020078CF75 /* MovieDetailLayoutViewControllerLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D3924021B020078CF75 /* MovieDetailLayoutViewControllerLayoutExtension.swift */; };
 		45A42D3C2402B4CD0078CF75 /* GetConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D3B2402B4CD0078CF75 /* GetConfigurationUseCase.swift */; };
 		45A42D3F2402B5150078CF75 /* CountryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D3E2402B5150078CF75 /* CountryEntity.swift */; };
 		45A42D412402B5250078CF75 /* CountryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A42D402402B5250078CF75 /* CountryResponse.swift */; };
@@ -70,6 +70,8 @@
 		45EEFF0C240470DD0053E647 /* StubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C9803C2402E65500AEB504 /* StubManager.swift */; };
 		45EEFF0E2404A1270053E647 /* UpcomingMoviesBR.json in Resources */ = {isa = PBXBuildFile; fileRef = 45EEFF0D2404A1270053E647 /* UpcomingMoviesBR.json */; };
 		45EEFF0F2404A46F0053E647 /* XCTestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C980332402DC9E00AEB504 /* XCTestExtension.swift */; };
+		45EEFF132404BC4A0053E647 /* ExpandedMoviePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EEFF122404BC4A0053E647 /* ExpandedMoviePopupViewController.swift */; };
+		45EEFF182404BCA70053E647 /* ExpandedMoviePopupViewControllerLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EEFF172404BCA70053E647 /* ExpandedMoviePopupViewControllerLayoutExtension.swift */; };
 		98DFB767B5F7AD3DCFFD7A38 /* libPods-the-moviedb-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B674288D834B2CB7824D7F8 /* libPods-the-moviedb-app.a */; };
 		D7C51C84463C8B2D8BBBC628 /* libPods-the-moviedb-appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6D55ED0C6B7CFA3229B863 /* libPods-the-moviedb-appTests.a */; };
 		F4583158F17358EE7C0763A3 /* libPods-the-moviedb-app-the-moviedb-appUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C11BF9C00431359AD5E37D /* libPods-the-moviedb-app-the-moviedb-appUITests.a */; };
@@ -120,7 +122,7 @@
 		45A42D31240205370078CF75 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		45A42D34240216BD0078CF75 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		45A42D36240217CF0078CF75 /* UpcomingMoviesViewControllerMethodsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesViewControllerMethodsExtension.swift; sourceTree = "<group>"; };
-		45A42D3924021B020078CF75 /* MovieDetailLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailLayoutViewController.swift; sourceTree = "<group>"; };
+		45A42D3924021B020078CF75 /* MovieDetailLayoutViewControllerLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailLayoutViewControllerLayoutExtension.swift; sourceTree = "<group>"; };
 		45A42D3B2402B4CD0078CF75 /* GetConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConfigurationUseCase.swift; sourceTree = "<group>"; };
 		45A42D3E2402B5150078CF75 /* CountryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryEntity.swift; sourceTree = "<group>"; };
 		45A42D402402B5250078CF75 /* CountryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryResponse.swift; sourceTree = "<group>"; };
@@ -167,6 +169,8 @@
 		45C9803C2402E65500AEB504 /* StubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubManager.swift; sourceTree = "<group>"; };
 		45EEFEFC240464D90053E647 /* UpcomingMoviesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesTest.swift; sourceTree = "<group>"; };
 		45EEFF0D2404A1270053E647 /* UpcomingMoviesBR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UpcomingMoviesBR.json; sourceTree = "<group>"; };
+		45EEFF122404BC4A0053E647 /* ExpandedMoviePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedMoviePopupViewController.swift; sourceTree = "<group>"; };
+		45EEFF172404BCA70053E647 /* ExpandedMoviePopupViewControllerLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedMoviePopupViewControllerLayoutExtension.swift; sourceTree = "<group>"; };
 		4B674288D834B2CB7824D7F8 /* libPods-the-moviedb-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-the-moviedb-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FAA2303DA544ADD8C8EC4C1 /* Pods-the-moviedb-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the-moviedb-appTests.debug.xcconfig"; path = "Target Support Files/Pods-the-moviedb-appTests/Pods-the-moviedb-appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70AEBF40D81DBF9424242FCB /* Pods-the-moviedb-app-the-moviedb-appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the-moviedb-app-the-moviedb-appUITests.debug.xcconfig"; path = "Target Support Files/Pods-the-moviedb-app-the-moviedb-appUITests/Pods-the-moviedb-app-the-moviedb-appUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -313,7 +317,7 @@
 		45A42D3824021AE00078CF75 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				45A42D3924021B020078CF75 /* MovieDetailLayoutViewController.swift */,
+				45A42D3924021B020078CF75 /* MovieDetailLayoutViewControllerLayoutExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -453,6 +457,7 @@
 		45AA145E2401619C00CC6F6F /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				45EEFF152404BC860053E647 /* Poster Popup */,
 				45A42D332402168B0078CF75 /* Movie Detail */,
 				45AA142F23FF67BC00CC6F6F /* Upcoming Movies */,
 			);
@@ -588,6 +593,23 @@
 				457A74412402EB6400CD5DFC /* Stub */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		45EEFF152404BC860053E647 /* Poster Popup */ = {
+			isa = PBXGroup;
+			children = (
+				45EEFF162404BC9B0053E647 /* Extension */,
+				45EEFF122404BC4A0053E647 /* ExpandedMoviePopupViewController.swift */,
+			);
+			path = "Poster Popup";
+			sourceTree = "<group>";
+		};
+		45EEFF162404BC9B0053E647 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				45EEFF172404BCA70053E647 /* ExpandedMoviePopupViewControllerLayoutExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		761A1789FD31B2DA320C703E /* Frameworks */ = {
@@ -854,7 +876,7 @@
 				45AA143C23FF6C5400CC6F6F /* UIViewExtension.swift in Sources */,
 				45AA143223FF67FA00CC6F6F /* UpcomingMoviesViewControllerDelegateExtension.swift in Sources */,
 				45A42D452402C24C0078CF75 /* StringExtension.swift in Sources */,
-				45A42D3A24021B020078CF75 /* MovieDetailLayoutViewController.swift in Sources */,
+				45A42D3A24021B020078CF75 /* MovieDetailLayoutViewControllerLayoutExtension.swift in Sources */,
 				45AA146D2401693500CC6F6F /* MovieConverter.swift in Sources */,
 				45AA146F2401694F00CC6F6F /* MovieEntity.swift in Sources */,
 				45B7CD6523FF23FA0014821B /* UpcomingMoviesViewController.swift in Sources */,
@@ -864,6 +886,8 @@
 				45AA143E23FF721300CC6F6F /* UIFontExtension.swift in Sources */,
 				45AA1464240163DC00CC6F6F /* GenericRequest.swift in Sources */,
 				45B7CD6123FF23FA0014821B /* AppDelegate.swift in Sources */,
+				45EEFF132404BC4A0053E647 /* ExpandedMoviePopupViewController.swift in Sources */,
+				45EEFF182404BCA70053E647 /* ExpandedMoviePopupViewControllerLayoutExtension.swift in Sources */,
 				45A42D3C2402B4CD0078CF75 /* GetConfigurationUseCase.swift in Sources */,
 				45A42D292401E2450078CF75 /* GetGenreUseCase.swift in Sources */,
 				45AA143923FF6A4400CC6F6F /* PosterWithDescriptionCollectionViewCell.swift in Sources */,

@@ -150,7 +150,7 @@
 		45AA14692401654800CC6F6F /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		45AA146C2401693500CC6F6F /* MovieConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieConverter.swift; sourceTree = "<group>"; };
 		45AA146E2401694F00CC6F6F /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
-		45B7CD5D23FF23FA0014821B /* the-moviedb-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "the-moviedb-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45B7CD5D23FF23FA0014821B /* The MovieDB App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The MovieDB App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B7CD6023FF23FA0014821B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45B7CD6223FF23FA0014821B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		45B7CD6423FF23FA0014821B /* UpcomingMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesViewController.swift; sourceTree = "<group>"; };
@@ -510,7 +510,7 @@
 		45B7CD5E23FF23FA0014821B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45B7CD5D23FF23FA0014821B /* the-moviedb-app.app */,
+				45B7CD5D23FF23FA0014821B /* The MovieDB App.app */,
 				45B7CD7323FF23FC0014821B /* the-moviedb-appTests.xctest */,
 				45B7CD7E23FF23FC0014821B /* the-moviedb-appUITests.xctest */,
 			);
@@ -653,7 +653,7 @@
 			);
 			name = "the-moviedb-app";
 			productName = "the-moviedb-app";
-			productReference = 45B7CD5D23FF23FA0014821B /* the-moviedb-app.app */;
+			productReference = 45B7CD5D23FF23FA0014821B /* The MovieDB App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		45B7CD7223FF23FC0014821B /* the-moviedb-appTests */ = {
@@ -1102,7 +1102,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "the-moviedb-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The MovieDB App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1121,7 +1121,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "the-moviedb-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The MovieDB App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

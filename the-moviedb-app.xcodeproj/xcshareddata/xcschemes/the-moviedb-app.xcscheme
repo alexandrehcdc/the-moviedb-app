@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45B7CD5C23FF23FA0014821B"
-               BuildableName = "the-moviedb-app.app"
+               BuildableName = "The MovieDB App.app"
                BlueprintName = "the-moviedb-app"
                ReferencedContainer = "container:the-moviedb-app.xcodeproj">
             </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45B7CD5C23FF23FA0014821B"
-            BuildableName = "the-moviedb-app.app"
+            BuildableName = "The MovieDB App.app"
             BlueprintName = "the-moviedb-app"
             ReferencedContainer = "container:the-moviedb-app.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45B7CD5C23FF23FA0014821B"
-            BuildableName = "the-moviedb-app.app"
+            BuildableName = "The MovieDB App.app"
             BlueprintName = "the-moviedb-app"
             ReferencedContainer = "container:the-moviedb-app.xcodeproj">
          </BuildableReference>

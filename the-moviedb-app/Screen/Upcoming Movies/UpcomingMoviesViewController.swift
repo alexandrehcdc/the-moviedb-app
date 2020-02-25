@@ -120,6 +120,19 @@ class UpcomingMoviesViewController: UICollectionViewController {
     
     @objc func searchBarDidPress(sender: UIBarButtonItem) {
         self.toggleNavigationBarItems()
+        self.searchBar.becomeFirstResponder()
+        
+        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissSearch))
+        singleTapGestureRecognizer.numberOfTapsRequired = 1
+        singleTapGestureRecognizer.isEnabled            = true
+        singleTapGestureRecognizer.cancelsTouchesInView = false
+        
+        self.view.addGestureRecognizer(singleTapGestureRecognizer)
+    }
+    
+    @objc func dismissSearch(sender: UITapGestureRecognizer) {
+        self.searchBar.resignFirstResponder()
+        self.toggleNavigationBarItems()
     }
     
     @objc func locationButtonDidPress(sender: UIButton) {
@@ -151,5 +164,4 @@ class UpcomingMoviesViewController: UICollectionViewController {
     }
     
     func cancelRegionPick(action: UIAlertAction) { }
-    
 }

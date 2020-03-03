@@ -1,3 +1,32 @@
-PODFILE CHECKSUM: 12573dd78ae31ce95672f8ffd46ceddc486e302e
+PODS:
+  - Fakery (4.1.1)
+  - OHHTTPStubs/Core (8.0.0)
+  - OHHTTPStubs/Default (8.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (8.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (8.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (8.0.0)
+  - OHHTTPStubs/Swift (8.0.0):
+    - OHHTTPStubs/Default
+
+DEPENDENCIES:
+  - Fakery
+  - OHHTTPStubs/Swift
+
+SPEC REPOS:
+  trunk:
+    - Fakery
+    - OHHTTPStubs
+
+SPEC CHECKSUMS:
+  Fakery: d3380c4aa1efe7631c0831d7e26aa9db4491f014
+  OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
+
+PODFILE CHECKSUM: 338bda8ac9c05a43ca02c8534a34b69b6b89ea37
 
 COCOAPODS: 1.8.3

@@ -5,7 +5,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        true
+        
+        if ProcessInfo().environment["TESTING"] == "YES" {
+            StubManager.setUp()
+        }
+        
+        return true
     }
 
     // MARK: UISceneSession Lifecycle
